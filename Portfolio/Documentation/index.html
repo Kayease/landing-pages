@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Chen - Portfolio Documentation</title>
+    <meta name="description" content="Complete documentation for Alex Chen's portfolio template">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/documentation.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="../index.html" class="brand-link">
+                    <i class="fas fa-code"></i>
+                    <span>Alex Chen</span>
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="../index.html" class="nav-link">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="https://alexchen.dev/" class="nav-link" target="_blank">
+                    <i class="fas fa-globe"></i>
+                    <span>Website</span>
+                </a>
+            </div>
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <div class="documentation-wrapper">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h3>Documentation</h3>
+                <button class="sidebar-close" id="sidebar-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <h4>Getting Started</h4>
+                    <a href="#introduction" class="nav-item">
+                        <i class="fas fa-rocket"></i>
+                        <span>Introduction</span>
+                    </a>
+                    <a href="#installation" class="nav-item">
+                        <i class="fas fa-download"></i>
+                        <span>Installation</span>
+                    </a>
+                    <a href="#quick-start" class="nav-item">
+                        <i class="fas fa-play"></i>
+                        <span>Quick Start</span>
+                    </a>
+                </div>
+                
+                <div class="nav-section">
+                    <h4>Customization</h4>
+                    <a href="#personalization" class="nav-item">
+                        <i class="fas fa-user-edit"></i>
+                        <span>Personalization</span>
+                    </a>
+                    <a href="#styling" class="nav-item">
+                        <i class="fas fa-palette"></i>
+                        <span>Styling & Colors</span>
+                    </a>
+                </div>
+                
+                <div class="nav-section">
+                    <h4>Features</h4>
+                    <a href="#components" class="nav-item">
+                        <i class="fas fa-puzzle-piece"></i>
+                        <span>Components</span>
+                    </a>
+                    <a href="#responsive" class="nav-item">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>Responsive Design</span>
+                    </a>
+                </div>
+                
+                <div class="nav-section">
+                    <h4>Support</h4>
+                    <a href="#contact" class="nav-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>Contact Support</span>
+                    </a>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="content-wrapper">
+                <!-- Introduction -->
+                <section id="introduction" class="doc-section">
+                    <div class="section-header">
+                        <h1>Alex Chen Portfolio Documentation</h1>
+                        <p class="section-subtitle">
+                            A comprehensive guide to setting up, customizing, and deploying your professional portfolio website.
+                        </p>
+                    </div>
+                    
+                    <div class="feature-highlights">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <h3>Responsive Design</h3>
+                            <p>Perfect on all devices and screen sizes</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-magic"></i>
+                            </div>
+                            <h3>Modern Animations</h3>
+                            <p>Smooth scroll animations and interactions</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-palette"></i>
+                            </div>
+                            <h3>Easy Customization</h3>
+                            <p>Well-organized code for easy modifications</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <h3>Fast Performance</h3>
+                            <p>Optimized for speed and efficiency</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-box">
+                        <div class="info-icon">
+                            <i class="fas fa-info-circle"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>About This Template</h4>
+                            <p>This portfolio template is designed by Alex Chen and uses modern web technologies including CSS Grid, Flexbox, and JavaScript ES6+. It's perfect for developers, designers, and creative professionals looking to showcase their work.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Installation -->
+                <section id="installation" class="doc-section">
+                    <h2>Installation Guide</h2>
+                    <p>Follow these steps to get your portfolio up and running quickly.</p>
+                    
+                    <div class="step-container">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Download the Template</h3>
+                            <p>Download the Alex Chen Portfolio template files from your preferred marketplace or source.</p>
+                            <div class="code-block">
+                                <div class="code-header">
+                                    <span>Terminal</span>
+                                </div>
+                                <pre><code># Extract the downloaded files
+unzip alex-chen-portfolio.zip
+cd alex-chen-portfolio
+
+# Or if using git
+git clone https://github.com/alexchen-dev/portfolio-template.git
+cd portfolio-template</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="step-container">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>File Structure</h3>
+                            <p>Understand the organization of your template files.</p>
+                            <div class="code-block">
+                                <div class="code-header">
+                                    <span>File Structure</span>
+                                </div>
+                                <pre><code>alex-chen-portfolio/
+├── index.html              # Main portfolio page
+├── css/
+│   └── styles.css          # Main stylesheet
+├── js/
+│   └── main.js            # JavaScript functionality
+├── assets/
+│   └── images/            # Image assets
+└── Documentation/
+    ├── index.html         # This documentation
+    └── css/
+        └── documentation.css</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="step-container">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Upload to Server</h3>
+                            <p>Upload all files to your web server using FTP, cPanel, or your preferred method.</p>
+                            <div class="info-box warning">
+                                <div class="info-icon">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                </div>
+                                <div class="info-content">
+                                    <h4>Important Note</h4>
+                                    <p>Make sure to maintain the file structure when uploading to your server. All relative paths depend on this structure.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Quick Start -->
+                <section id="quick-start" class="doc-section">
+                    <h2>Quick Start Guide</h2>
+                    <p>Get your portfolio live in minutes with these essential customizations.</p>
+                    
+                    <div class="customization-grid">
+                        <div class="customization-card">
+                            <h3>1. Update Personal Information</h3>
+                            <p>Replace the placeholder content with your own information.</p>
+                            <div class="code-block">
+                                <div class="code-header">
+                                    <span>HTML</span>
+                                </div>
+                                <pre><code>&lt;!-- Update your name and role --&gt;
+&lt;h1&gt;Your Name&lt;/h1&gt;
+&lt;div class="hero-role"&gt;
+    &lt;span class="typewriter" id="typewriter"&gt;Your Role&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;!-- Update contact information --&gt;
+&lt;p&gt;hello@yourdomain.com&lt;/p&gt;
+&lt;p&gt;+1 (555) 123-4567&lt;/p&gt;</code></pre>
+                            </div>
+                        </div>
+                        
+                        <div class="customization-card">
+                            <h3>2. Customize Colors</h3>
+                            <p>Update the color scheme to match your brand.</p>
+                            <div class="code-block">
+                                <div class="code-header">
+                                    <span>CSS</span>
+                                </div>
+                                <pre><code>/* Update these CSS variables in styles.css */
+:root {
+    --primary-color: #667eea;      /* Your primary color */
+    --secondary-color: #764ba2;    /* Your secondary color */
+    --accent-color: #f093fb;       /* Your accent color */
+    --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}</code></pre>
+                            </div>
+                        </div>
+                        
+                        <div class="customization-card">
+                            <h3>3. Add Your Projects</h3>
+                            <p>Replace the portfolio projects with your own work.</p>
+                            <div class="code-block">
+                                <div class="code-header">
+                                    <span>HTML</span>
+                                </div>
+                                <pre><code>&lt;div class="carousel-slide"&gt;
+    &lt;div class="carousel-image"&gt;
+        &lt;img src="your-project-image.jpg" alt="Your Project"&gt;
+    &lt;/div&gt;
+    &lt;div class="carousel-content"&gt;
+        &lt;div class="carousel-category"&gt;Web Application&lt;/div&gt;
+        &lt;h3 class="carousel-title"&gt;Your Project Name&lt;/h3&gt;
+        &lt;p class="carousel-description"&gt;Your project description...&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Personalization -->
+                <section id="personalization" class="doc-section">
+                    <h2>Personalization</h2>
+                    <p>Make the portfolio truly yours by customizing every aspect.</p>
+                    
+                    <div class="content-grid">
+                        <div class="content-card">
+                            <h3>Profile Information</h3>
+                            <ul class="feature-list">
+                                <li>Update name, title, and bio</li>
+                                <li>Add your profile picture</li>
+                                <li>Customize contact details</li>
+                                <li>Update social media links</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="content-card">
+                            <h3>Skills & Expertise</h3>
+                            <ul class="feature-list">
+                                <li>Modify skill percentages</li>
+                                <li>Add or remove skills</li>
+                                <li>Update technology stack</li>
+                                <li>Customize experience timeline</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="content-card">
+                            <h3>Portfolio Projects</h3>
+                            <ul class="feature-list">
+                                <li>Add your own projects</li>
+                                <li>Include project images</li>
+                                <li>Update project descriptions</li>
+                                <li>Add live demo links</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="content-card">
+                            <h3>Testimonials</h3>
+                            <ul class="feature-list">
+                                <li>Add client testimonials</li>
+                                <li>Include client photos</li>
+                                <li>Update company names</li>
+                                <li>Customize testimonial text</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Styling -->
+                <section id="styling" class="doc-section">
+                    <h2>Styling & Colors</h2>
+                    <p>Customize the visual appearance to match your brand identity.</p>
+                    
+                    <div class="color-palette">
+                        <h3>Color Scheme</h3>
+                        <div class="color-grid">
+                            <div class="color-item">
+                                <div class="color-swatch primary"></div>
+                                <div class="color-info">
+                                    <h4>Primary Color</h4>
+                                    <p>#667eea</p>
+                                </div>
+                            </div>
+                            <div class="color-item">
+                                <div class="color-swatch secondary"></div>
+                                <div class="color-info">
+                                    <h4>Secondary Color</h4>
+                                    <p>#764ba2</p>
+                                </div>
+                            </div>
+                            <div class="color-item">
+                                <div class="color-swatch accent"></div>
+                                <div class="color-info">
+                                    <h4>Accent Color</h4>
+                                    <p>#f093fb</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>CSS Variables</span>
+                        </div>
+                        <pre><code>/* Main color variables */
+:root {
+    --primary-color: #667eea;
+    --secondary-color: #764ba2;
+    --accent-color: #f093fb;
+    --text-primary: #1f2937;
+    --text-secondary: #6b7280;
+    --bg-primary: #ffffff;
+    --bg-secondary: #f9fafb;
+    --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+/* Typography */
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+}
+
+/* Custom fonts */
+@import url('https://fonts.googleapis.com/css2?family=Your+Font:wght@300;400;500;600;700&display=swap');</code></pre>
+                    </div>
+                </section>
+
+                <!-- Components -->
+                <section id="components" class="doc-section">
+                    <h2>Components</h2>
+                    <p>Learn about the key components and how to customize them.</p>
+                    
+                    <div class="component-grid">
+                        <div class="component-card">
+                            <h3>Navigation</h3>
+                            <p>Fixed header with smooth scroll effects and mobile menu.</p>
+                            <div class="component-features">
+                                <span class="feature-tag">Responsive</span>
+                                <span class="feature-tag">Smooth Scroll</span>
+                                <span class="feature-tag">Mobile Menu</span>
+                            </div>
+                        </div>
+                        
+                        <div class="component-card">
+                            <h3>Hero Section</h3>
+                            <p>Animated text, particle effects, and call-to-action buttons.</p>
+                            <div class="component-features">
+                                <span class="feature-tag">Typewriter Effect</span>
+                                <span class="feature-tag">Particle Background</span>
+                                <span class="feature-tag">CTA Buttons</span>
+                            </div>
+                        </div>
+                        
+                        <div class="component-card">
+                            <h3>Portfolio Carousel</h3>
+                            <p>Interactive carousel for showcasing projects with navigation.</p>
+                            <div class="component-features">
+                                <span class="feature-tag">Touch Swipe</span>
+                                <span class="feature-tag">Navigation Controls</span>
+                                <span class="feature-tag">Responsive Images</span>
+                            </div>
+                        </div>
+                        
+                        <div class="component-card">
+                            <h3>Contact Form</h3>
+                            <p>Functional contact form with validation and styling.</p>
+                            <div class="component-features">
+                                <span class="feature-tag">Form Validation</span>
+                                <span class="feature-tag">Responsive Design</span>
+                                <span class="feature-tag">Custom Styling</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Responsive Design -->
+                <section id="responsive" class="doc-section">
+                    <h2>Responsive Design</h2>
+                    <p>The template is fully responsive with optimized layouts for all devices.</p>
+                    
+                    <div class="responsive-breakpoints">
+                        <div class="breakpoint-card">
+                            <div class="breakpoint-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <h3>Mobile (≤768px)</h3>
+                            <ul>
+                                <li>Single column layout</li>
+                                <li>Mobile menu navigation</li>
+                                <li>Optimized touch targets</li>
+                                <li>Reduced text sizes</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="breakpoint-card">
+                            <div class="breakpoint-icon">
+                                <i class="fas fa-tablet-alt"></i>
+                            </div>
+                            <h3>Tablet (768px - 1024px)</h3>
+                            <ul>
+                                <li>Two-column layouts</li>
+                                <li>Medium text sizes</li>
+                                <li>Touch-friendly interactions</li>
+                                <li>Optimized spacing</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="breakpoint-card">
+                            <div class="breakpoint-icon">
+                                <i class="fas fa-desktop"></i>
+                            </div>
+                            <h3>Desktop (≥1024px)</h3>
+                            <ul>
+                                <li>Full desktop layout</li>
+                                <li>Large text sizes</li>
+                                <li>Hover effects</li>
+                                <li>Maximum content width</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Contact Support -->
+                <section id="contact" class="doc-section">
+                    <h2>Contact Support</h2>
+                    <p>Need help? Here's how to get in touch.</p>
+                    
+                    <div class="support-options">
+                        <div class="support-card">
+                            <div class="support-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h3>Email Support</h3>
+                            <p>Get direct help with customization and technical issues.</p>
+                            <a href="mailto:support@alexchen.dev" class="support-link">
+                                <i class="fas fa-arrow-right"></i>
+                                Send Email
+                            </a>
+                        </div>
+                        
+                        <div class="support-card">
+                            <div class="support-icon">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <h3>GitHub Issues</h3>
+                            <p>Report bugs and request features on GitHub.</p>
+                            <a href="https://github.com/alexchen-dev/portfolio-template/issues" class="support-link" target="_blank">
+                                <i class="fas fa-arrow-right"></i>
+                                View Issues
+                            </a>
+                        </div>
+                        
+                        <div class="support-card">
+                            <div class="support-icon">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <h3>Website</h3>
+                            <p>Visit our website for more information and updates.</p>
+                            <a href="https://alexchen.dev" class="support-link" target="_blank">
+                                <i class="fas fa-arrow-right"></i>
+                                Visit Website
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="doc-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <i class="fas fa-code"></i>
+                <span>Alex Chen</span>
+            </div>
+            <div class="footer-links">
+                <a href="../index.html">Back to Portfolio</a>
+                <a href="https://alexchen.dev" target="_blank">Website</a>
+                <a href="https://github.com/alexchen-dev" target="_blank">GitHub</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Alex Chen. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileToggle = document.getElementById('mobile-menu-toggle');
+        const sidebar = document.getElementById('sidebar');
+        const sidebarClose = document.getElementById('sidebar-close');
+        
+        mobileToggle.addEventListener('click', () => {
+            sidebar.classList.add('active');
+        });
+        
+        sidebarClose.addEventListener('click', () => {
+            sidebar.classList.remove('active');
+        });
+        
+        // Smooth scrolling for documentation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offsetTop = target.offsetTop - 100;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Active link highlighting
+        const sections = document.querySelectorAll('section[id]');
+        const navItems = document.querySelectorAll('.nav-item');
+
+        function updateActiveLink() {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('href') === `#${current}`) {
+                    item.classList.add('active');
+                }
+            });
+        }
+
+        // Update active link on scroll
+        window.addEventListener('scroll', updateActiveLink);
+
+        // Update active link on page load
+        document.addEventListener('DOMContentLoaded', updateActiveLink);
+    </script>
+</body>
+</html> 

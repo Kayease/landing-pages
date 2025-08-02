@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Chen - Professional Portfolio</title>
+    <meta name="description"
+        content="Professional portfolio showcasing web development, design, and creative solutions by Alex Chen">
+    <meta name="keywords" content="portfolio, web development, design, creative, Alex Chen">
+    <meta name="author" content="Alex Chen">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Alex Chen - Professional Portfolio">
+    <meta property="og:description"
+        content="Professional portfolio showcasing web development, design, and creative solutions">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://alexchen.dev">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <i class="fas fa-code"></i>
+                Alex Chen
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="Documentation/index.html">Documentation</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content" data-aos="fade-right">
+                <h1>Alex Chen</h1>
+                <div class="hero-role">
+                    <span class="typewriter" id="typewriter">Full Stack Developer</span>
+                </div>
+                <p class="hero-tagline">
+                    Transforming bold ideas into powerful digital solutions. I create beautiful, functional, and
+                    user-centered experiences that solve real-world problems with clean code and modern design
+                    principles.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fas fa-rocket"></i>
+                        Start Project
+                    </a>
+                    <a href="#portfolio" class="btn btn-secondary">
+                        <i class="fas fa-eye"></i>
+                        View Work
+                    </a>
+                </div>
+            </div>
+            <div class="hero-avatar" data-aos="fade-left">
+                <div class="avatar-container">
+                    <div class="avatar-image" style="background-image: url('assets/images/Person-home.jpeg')">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">About Alex Chen</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+                Passionate about creating digital solutions that make a difference
+            </p>
+            <div class="about-content">
+                <div class="about-image" data-aos="fade-right">
+                    <div class="about-img-container">
+                        <div class="about-img" style="background-image: url('assets/images/Person-about.jpeg')">
+                        </div>
+                    </div>
+                </div>
+                <div class="about-text" data-aos="fade-left">
+                    <p>
+                        I am Alex Chen, a passionate full-stack developer with over 5 years of experience creating
+                        digital solutions that make a difference. My journey began with a curiosity for how things work,
+                        which led me to explore the fascinating world of web development and design.
+                    </p>
+                    <p>
+                        I specialize in building scalable web applications using modern technologies. My approach
+                        combines technical expertise with creative problem-solving to deliver exceptional user
+                        experiences that drive business growth.
+                    </p>
+                    <div class="tech-stack">
+                        <span class="tech-badge">JavaScript</span>
+                        <span class="tech-badge">React</span>
+                        <span class="tech-badge">Node.js</span>
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">MongoDB</span>
+                        <span class="tech-badge">AWS</span>
+                        <span class="tech-badge">UI/UX Design</span>
+                        <span class="tech-badge">Mobile Development</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section skills" id="skills">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Skills & Expertise</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+                Technologies and tools we use to bring ideas to life
+            </p>
+            <div class="skills-grid">
+                <div class="skill-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="skill-header">
+                        <span class="skill-name">Frontend Development</span>
+                        <span class="skill-percentage">95%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="95"></div>
+                    </div>
+                </div>
+                <div class="skill-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="skill-header">
+                        <span class="skill-name">Backend Development</span>
+                        <span class="skill-percentage">90%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="90"></div>
+                    </div>
+                </div>
+                <div class="skill-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="skill-header">
+                        <span class="skill-name">UI/UX Design</span>
+                        <span class="skill-percentage">85%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="85"></div>
+                    </div>
+                </div>
+                <div class="skill-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="skill-header">
+                        <span class="skill-name">Mobile Development</span>
+                        <span class="skill-percentage">88%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="88"></div>
+                    </div>
+                </div>
+                <div class="skill-item" data-aos="fade-up" data-aos-delay="500">
+                    <div class="skill-header">
+                        <span class="skill-name">Cloud & DevOps</span>
+                        <span class="skill-percentage">82%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="82"></div>
+                    </div>
+                </div>
+                <div class="skill-item" data-aos="fade-up" data-aos-delay="600">
+                    <div class="skill-header">
+                        <span class="skill-name">Project Management</span>
+                        <span class="skill-percentage">80%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="80"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section experience" id="experience">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Our Journey</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+                Key milestones and achievements in our professional journey
+            </p>
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2023 - Present</div>
+                        <h3 class="timeline-title">Senior Full Stack Developer</h3>
+                        <div class="timeline-company">KayEase Global</div>
+                        <p class="timeline-description">Leading development of enterprise-level web applications using
+                            React, Node.js, and AWS. Mentoring junior developers and implementing best practices for
+                            scalable solutions.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2021 - 2023</div>
+                        <h3 class="timeline-title">Full Stack Developer</h3>
+                        <div class="timeline-company">Digital Innovations Inc.</div>
+                        <p class="timeline-description">Developed and maintained multiple client projects using modern
+                            web technologies. Collaborated with design teams to create responsive interfaces and
+                            optimized user experiences.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2019 - 2021</div>
+                        <h3 class="timeline-title">Frontend Developer</h3>
+                        <div class="timeline-company">StartupHub</div>
+                        <p class="timeline-description">Specialized in creating interactive user interfaces using React
+                            and Vue.js. Worked closely with UX designers to implement pixel-perfect designs and optimize
+                            performance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="section portfolio" id="portfolio">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Featured Projects</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+                A showcase of our recent work and creative solutions
+            </p>
+
+            <div class="portfolio-carousel" data-aos="fade-up" data-aos-delay="200">
+                <div class="carousel-container" id="carousel-container">
+                    <!-- Slide 1 -->
+                    <div class="carousel-slide">
+                        <div class="carousel-image">
+                            <img src="assets/images/project-1.jpeg" alt="E-commerce Platform">
+                        </div>
+                        <div class="carousel-content">
+                            <div class="carousel-category">Web Application</div>
+                            <h3 class="carousel-title">E-commerce Platform</h3>
+                            <p class="carousel-description">
+                                A comprehensive e-commerce solution built with React and Node.js, featuring real-time
+                                inventory management, secure payment processing, and an intuitive admin dashboard. The
+                                platform handles thousands of transactions daily with 99.9% uptime.
+                            </p>
+                            <div class="carousel-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">MongoDB</span>
+                                <span class="tech-tag">Stripe</span>
+                                <span class="tech-tag">AWS</span>
+                            </div>
+                            <div class="carousel-links">
+                                <a href="#" class="carousel-link primary">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    Live Demo
+                                </a>
+                                <a href="#" class="carousel-link secondary">
+                                    <i class="fab fa-github"></i>
+                                    View Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="carousel-slide">
+                        <div class="carousel-image">
+                            <img src="assets/images/project-2.jpeg" alt="Task Management App">
+                        </div>
+                        <div class="carousel-content">
+                            <div class="carousel-category">Mobile Application</div>
+                            <h3 class="carousel-title">Task Management App</h3>
+                            <p class="carousel-description">
+                                A React Native mobile application for team collaboration and task management. Features
+                                include real-time synchronization, push notifications, offline support, and intuitive
+                                drag-and-drop interfaces for enhanced productivity.
+                            </p>
+                            <div class="carousel-tech">
+                                <span class="tech-tag">React Native</span>
+                                <span class="tech-tag">Firebase</span>
+                                <span class="tech-tag">Redux</span>
+                                <span class="tech-tag">Push Notifications</span>
+                            </div>
+                            <div class="carousel-links">
+                                <a href="#" class="carousel-link primary">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    Live Demo
+                                </a>
+                                <a href="#" class="carousel-link secondary">
+                                    <i class="fab fa-github"></i>
+                                    View Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="carousel-slide">
+                        <div class="carousel-image">
+                            <img src="assets/images/project-3.jpeg" alt="Analytics Dashboard">
+                        </div>
+                        <div class="carousel-content">
+                            <div class="carousel-category">Data Visualization</div>
+                            <h3 class="carousel-title">Analytics Dashboard</h3>
+                            <p class="carousel-description">
+                                A comprehensive analytics dashboard built with Vue.js and D3.js, featuring real-time
+                                data visualization, interactive charts, and customizable reports. Processes over 1M data
+                                points daily with lightning-fast performance.
+                            </p>
+                            <div class="carousel-tech">
+                                <span class="tech-tag">Vue.js</span>
+                                <span class="tech-tag">D3.js</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                                <span class="tech-tag">Docker</span>
+                            </div>
+                            <div class="carousel-links">
+                                <a href="#" class="carousel-link primary">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    Live Demo
+                                </a>
+                                <a href="#" class="carousel-link secondary">
+                                    <i class="fab fa-github"></i>
+                                    View Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 4 -->
+                    <div class="carousel-slide">
+                        <div class="carousel-image">
+                            <img src="assets/images/project-1.jpeg" alt="Social Platform">
+                        </div>
+                        <div class="carousel-content">
+                            <div class="carousel-category">Social Platform</div>
+                            <h3 class="carousel-title">Social Media Platform</h3>
+                            <p class="carousel-description">
+                                A modern social media platform built with React and Firebase, featuring real-time
+                                messaging, post sharing, user profiles, and advanced privacy controls. Supports
+                                thousands of concurrent users with seamless performance.
+                            </p>
+                            <div class="carousel-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Firebase</span>
+                                <span class="tech-tag">WebSocket</span>
+                                <span class="tech-tag">Cloud Functions</span>
+                            </div>
+                            <div class="carousel-links">
+                                <a href="#" class="carousel-link primary">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    Live Demo
+                                </a>
+                                <a href="#" class="carousel-link secondary">
+                                    <i class="fab fa-github"></i>
+                                    View Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <button class="carousel-nav carousel-prev" id="carousel-prev">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="carousel-nav carousel-next" id="carousel-next">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <!-- Carousel Indicators -->
+            <div class="carousel-indicators" id="carousel-indicators">
+                <div class="carousel-indicator active" data-slide="0"></div>
+                <div class="carousel-indicator" data-slide="1"></div>
+                <div class="carousel-indicator" data-slide="2"></div>
+                <div class="carousel-indicator" data-slide="3"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section testimonials" id="testimonials">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Client Testimonials</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+                What clients say about working with KayEase Global
+            </p>
+            <div class="testimonials-grid">
+                <div class="testimonial-card" data-aos="fade-up">
+                    <div class="testimonial-quote">"</div>
+                    <p class="testimonial-text">
+                        "KayEase Global delivered an exceptional e-commerce platform that exceeded our expectations.
+                        Their attention to detail and technical expertise made the entire process smooth and efficient."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar" style="background-image: url('assets/images/Person-home.jpeg')">
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>Sarah Johnson</h4>
+                            <p>CEO, RetailCorp</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-quote">"</div>
+                    <p class="testimonial-text">
+                        "Working with KayEase Global was a game-changer for our startup. They not only built our web
+                        application but also provided valuable insights that improved our overall user experience."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar" style="background-image: url('assets/images/Person-home.jpeg')">
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>Michael Chen</h4>
+                            <p>Founder, TechStart</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="testimonial-quote">"</div>
+                    <p class="testimonial-text">
+                        "KayEase Global's expertise in both frontend and backend development made them the perfect
+                        choice for our complex project. The results speak for themselves."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar" style="background-image: url('assets/images/Person-home.jpeg')">
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>Emily Rodriguez</h4>
+                            <p>CTO, DataFlow</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Let's Work Together</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+                Ready to bring your ideas to life? Let's start a conversation
+            </p>
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right">
+                    <h3>Get In Touch</h3>
+                    <p>I'm always interested in new opportunities and exciting projects. Whether you have a question or
+                        just want to say hi, feel free to reach out!</p>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>hello@alexchen.dev</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4>Location</h4>
+                            <p>San Francisco, CA</p>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" data-aos="fade-left">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" class="form-control" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">
+                        <i class="fas fa-paper-plane"></i>
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-code"></i>
+                        <span>Alex Chen</span>
+                    </div>
+                    <p class="footer-description">
+                        Transforming bold ideas into powerful digital solutions. I create beautiful, functional, and
+                        user-centered experiences that solve real-world problems.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://alexchen.dev/" class="social-link" target="_blank" title="Website">
+                            <i class="fas fa-globe"></i>
+                        </a>
+                        <a href="https://github.com/alexchen-dev" class="social-link" target="_blank" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/alexchen-dev/" class="social-link" target="_blank"
+                            title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.instagram.com/alexchen.dev/" class="social-link" target="_blank"
+                            title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://x.com/alexchen_dev" class="social-link" target="_blank" title="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="Documentation/index.html">Documentation</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#portfolio">Web Development</a></li>
+                        <li><a href="#portfolio">Mobile Development</a></li>
+                        <li><a href="#portfolio">UI/UX Design</a></li>
+                        <li><a href="#portfolio">Cloud Solutions</a></li>
+                        <li><a href="#portfolio">Consulting</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info-footer">
+                        <div class="contact-item-footer">
+                            <i class="fas fa-envelope"></i>
+                            <span>hello@alexchen.dev</span>
+                        </div>
+                        <div class="contact-item-footer">
+                            <i class="fas fa-phone"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </div>
+                        <div class="contact-item-footer">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>San Francisco, CA</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 Alex Chen. All rights reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scroll-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechConf 2024 - Innovation Summit | Premium Tech Conference</title>
+    <meta name="description"
+        content="Join TechConf 2024 - The premier technology conference bringing together visionary leaders, innovative startups, and industry pioneers. Experience cutting-edge insights in AI, blockchain, quantum computing, and sustainable technology.">
+    <meta name="keywords"
+        content="tech conference, innovation summit, AI, blockchain, quantum computing, technology event">
+    <meta name="author" content="TechConf 2024">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="TechConf 2024 - Innovation Summit">
+    <meta property="og:description"
+        content="Join the premier technology conference with 2000+ attendees, 50+ speakers, and cutting-edge tech insights.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://techconf2024.com">
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Orbitron:wght@400;700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Swiper CSS for Carousel -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+
+    <!-- GSAP for Advanced Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+            <div class="shape shape-5"></div>
+            <div class="shape shape-6"></div>
+        </div>
+        <div class="particles-container" id="particles"></div>
+    </div>
+
+    <!-- Page Loader -->
+    <div class="loader-wrapper" id="loader">
+        <div class="loader">
+            <div class="loader-circle">
+                <div class="loader-ring"></div>
+                <div class="loader-ring"></div>
+                <div class="loader-ring"></div>
+            </div>
+            <div class="loader-text">
+                <span class="loader-char" data-char="T">T</span>
+                <span class="loader-char" data-char="e">e</span>
+                <span class="loader-char" data-char="c">c</span>
+                <span class="loader-char" data-char="h">h</span>
+                <span class="loader-char" data-char="C">C</span>
+                <span class="loader-char" data-char="o">o</span>
+                <span class="loader-char" data-char="n">n</span>
+                <span class="loader-char" data-char="f">f</span>
+                <span class="loader-char" data-char="2">2</span>
+                <span class="loader-char" data-char="0">0</span>
+                <span class="loader-char" data-char="2">2</span>
+                <span class="loader-char" data-char="4">4</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <div class="logo-icon">
+                    <div class="logo-hexagon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                </div>
+                <span class="logo-text">TechConf 2024</span>
+            </a>
+
+            <nav class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link active" data-text="Home">Home</a></li>
+                    <li><a href="#about" class="nav-link" data-text="About">About</a></li>
+                    <li><a href="#speakers" class="nav-link" data-text="Speakers">Speakers</a></li>
+                    <li><a href="#schedule" class="nav-link" data-text="Schedule">Schedule</a></li>
+                    <li><a href="#sponsors" class="nav-link" data-text="Sponsors">Sponsors</a></li>
+                    <li><a href="#tickets" class="nav-link" data-text="Tickets">Tickets</a></li>
+                    <li><a href="Documentation/index.html" class="nav-link" data-text="Docs">Documentation</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-cta">
+                <a href="#tickets" class="cta-btn">
+                    <span class="cta-text">Register Now</span>
+                    <span class="cta-icon">
+                        <i class="fas fa-ticket-alt"></i>
+                    </span>
+                </a>
+                <button class="mobile-menu-btn" id="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobile-nav">
+        <button class="mobile-nav-close" id="mobile-nav-close">
+            <i class="fas fa-times"></i>
+        </button>
+        <ul class="mobile-nav-links">
+            <li><a href="#home" class="mobile-nav-link">Home</a></li>
+            <li><a href="#about" class="mobile-nav-link">About</a></li>
+            <li><a href="#speakers" class="mobile-nav-link">Speakers</a></li>
+            <li><a href="#schedule" class="mobile-nav-link">Schedule</a></li>
+            <li><a href="#sponsors" class="mobile-nav-link">Sponsors</a></li>
+            <li><a href="#tickets" class="mobile-nav-link">Tickets</a></li>
+            <li><a href="Documentation/index.html" class="mobile-nav-link">Documentation</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-background">
+            <div class="hero-video-bg">
+                <video autoplay muted loop playsinline>
+                    <source
+                        src="https://assets.mixkit.co/videos/preview/mixkit-digital-animation-of-futuristic-devices-99786-large.mp4"
+                        type="video/mp4">
+                </video>
+                <div class="video-overlay"></div>
+            </div>
+        </div>
+
+        <div class="hero-content">
+            <div class="container">
+                <div class="hero-badge" data-aos="fade-down" data-aos-delay="200">
+                    <span class="badge-icon">🚀</span>
+                    <span class="badge-text">Innovation Summit 2024</span>
+                </div>
+
+                <h1 class="hero-title" data-aos="fade-up" data-aos-delay="400">
+                    <span class="title-line">Shaping the Future</span>
+                    <span class="title-line highlight">of Technology</span>
+                    <span class="title-line">Together</span>
+                </h1>
+
+                <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="600">
+                    Join 2000+ tech leaders, innovators, and visionaries for the most anticipated
+                    technology conference of 2024. Experience cutting-edge insights, network with
+                    industry pioneers, and discover the next big thing in tech.
+                </p>
+
+                <div class="hero-stats" data-aos="fade-up" data-aos-delay="800">
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="2000">0</div>
+                        <div class="stat-label">Attendees</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="50">0</div>
+                        <div class="stat-label">Speakers</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="3">0</div>
+                        <div class="stat-label">Days</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="100">0</div>
+                        <div class="stat-label">Sessions</div>
+                    </div>
+                </div>
+
+                <div class="hero-cta" data-aos="fade-up" data-aos-delay="1000">
+                    <a href="#tickets" class="cta-primary">
+                        <span class="cta-text">Get Your Tickets</span>
+                        <span class="cta-arrow">→</span>
+                    </a>
+                    <a href="#about" class="cta-secondary">
+                        <span class="cta-text">Learn More</span>
+                        <span class="cta-icon">📖</span>
+                    </a>
+                </div>
+
+                <div class="hero-scroll-indicator" data-aos="fade-up" data-aos-delay="1200">
+                    <div class="scroll-text">Scroll to explore</div>
+                    <div class="scroll-arrow">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">About TechConf 2024</h2>
+                <p class="section-subtitle">Where innovation meets opportunity</p>
+            </div>
+
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right">
+                    <h3>Why TechConf 2024?</h3>
+                    <p>TechConf 2024 is more than just a conference—it's a convergence of minds, ideas, and technologies
+                        that will shape the future. Our carefully curated program brings together the brightest minds in
+                        technology to share insights, foster collaboration, and inspire the next generation of
+                        innovators.</p>
+
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">🎯</div>
+                            <div class="feature-content">
+                                <h4>Expert Insights</h4>
+                                <p>Learn from industry leaders and technology pioneers</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🤝</div>
+                            <div class="feature-content">
+                                <h4>Networking</h4>
+                                <p>Connect with 2000+ professionals and entrepreneurs</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">💡</div>
+                            <div class="feature-content">
+                                <h4>Innovation</h4>
+                                <p>Discover cutting-edge technologies and trends</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-visual" data-aos="fade-left">
+                    <div class="visual-container">
+                        <div class="floating-card card-1">
+                            <i class="fas fa-robot"></i>
+                            <span>AI & ML</span>
+                        </div>
+                        <div class="floating-card card-2">
+                            <i class="fas fa-link"></i>
+                            <span>Blockchain</span>
+                        </div>
+                        <div class="floating-card card-3">
+                            <i class="fas fa-cloud"></i>
+                            <span>Cloud</span>
+                        </div>
+                        <div class="floating-card card-4">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Mobile</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Speakers Section -->
+    <section class="speakers" id="speakers">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Featured Speakers</h2>
+                <p class="section-subtitle">Meet the visionaries who will inspire you</p>
+            </div>
+
+            <div class="speakers-grid">
+                <div class="speaker-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="speaker-image">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
+                            alt="Dr. Sarah Chen">
+                        <div class="speaker-overlay">
+                            <div class="speaker-social">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="speaker-info">
+                        <h3>Dr. Sarah Chen</h3>
+                        <p class="speaker-title">AI Research Director, TechCorp</p>
+                        <p class="speaker-topic">"The Future of Artificial Intelligence"</p>
+                    </div>
+                </div>
+
+                <div class="speaker-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="speaker-image">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face"
+                            alt="Marcus Rodriguez">
+                        <div class="speaker-overlay">
+                            <div class="speaker-social">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="speaker-info">
+                        <h3>Marcus Rodriguez</h3>
+                        <p class="speaker-title">CTO, Blockchain Solutions</p>
+                        <p class="speaker-topic">"Web3: The Next Internet Revolution"</p>
+                    </div>
+                </div>
+
+                <div class="speaker-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="speaker-image">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400&h=400&fit=crop&crop=face"
+                            alt="Emily Watson">
+                        <div class="speaker-overlay">
+                            <div class="speaker-social">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="speaker-info">
+                        <h3>Emily Watson</h3>
+                        <p class="speaker-title">VP Engineering, CloudTech</p>
+                        <p class="speaker-topic">"Scalable Cloud Architecture"</p>
+                    </div>
+                </div>
+
+                <div class="speaker-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="speaker-image">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face"
+                            alt="David Kim">
+                        <div class="speaker-overlay">
+                            <div class="speaker-social">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="speaker-info">
+                        <h3>David Kim</h3>
+                        <p class="speaker-title">Founder, Quantum Computing Labs</p>
+                        <p class="speaker-topic">"Quantum Computing Breakthroughs"</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="speakers-cta" data-aos="fade-up">
+                <a href="#schedule" class="btn-secondary">View Full Schedule</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section class="schedule" id="schedule">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Event Schedule</h2>
+                <p class="section-subtitle">Three days of innovation and inspiration</p>
+            </div>
+
+            <div class="schedule-tabs" data-aos="fade-up">
+                <button class="tab-btn active" data-day="day1">Day 1</button>
+                <button class="tab-btn" data-day="day2">Day 2</button>
+                <button class="tab-btn" data-day="day3">Day 3</button>
+            </div>
+
+            <div class="schedule-content">
+                <div class="schedule-day active" id="day1">
+                    <div class="timeline">
+                        <div class="timeline-item" data-aos="fade-up">
+                            <div class="timeline-time">09:00 AM</div>
+                            <div class="timeline-content">
+                                <h3>Opening Keynote</h3>
+                                <p>Welcome and introduction to TechConf 2024</p>
+                                <div class="timeline-speaker">Dr. Sarah Chen</div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item" data-aos="fade-up">
+                            <div class="timeline-time">10:30 AM</div>
+                            <div class="timeline-content">
+                                <h3>AI & Machine Learning</h3>
+                                <p>Latest developments in artificial intelligence</p>
+                                <div class="timeline-speaker">Marcus Rodriguez</div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item" data-aos="fade-up">
+                            <div class="timeline-time">02:00 PM</div>
+                            <div class="timeline-content">
+                                <h3>Blockchain Workshop</h3>
+                                <p>Hands-on blockchain development session</p>
+                                <div class="timeline-speaker">Emily Watson</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sponsors Section -->
+    <section class="sponsors" id="sponsors">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Our Sponsors</h2>
+                <p class="section-subtitle">Proudly supported by industry leaders</p>
+            </div>
+
+            <div class="sponsors-grid" data-aos="fade-up">
+                <div class="sponsor-card">
+                    <div class="sponsor-logo">
+                        <i class="fab fa-google"></i>
+                        <span>Google</span>
+                    </div>
+                </div>
+                <div class="sponsor-card">
+                    <div class="sponsor-logo">
+                        <i class="fab fa-microsoft"></i>
+                        <span>Microsoft</span>
+                    </div>
+                </div>
+                <div class="sponsor-card">
+                    <div class="sponsor-logo">
+                        <i class="fab fa-apple"></i>
+                        <span>Apple</span>
+                    </div>
+                </div>
+                <div class="sponsor-card">
+                    <div class="sponsor-logo">
+                        <i class="fab fa-amazon"></i>
+                        <span>Amazon</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tickets Section -->
+    <section class="tickets" id="tickets">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Get Your Tickets</h2>
+                <p class="section-subtitle">Choose the perfect plan for your experience</p>
+            </div>
+
+            <div class="tickets-grid">
+                <div class="ticket-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="ticket-header">
+                        <h3>Early Bird</h3>
+                        <div class="ticket-price">
+                            <span class="currency">$</span>
+                            <span class="amount">299</span>
+                            <span class="period">/person</span>
+                        </div>
+                    </div>
+                    <div class="ticket-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Full conference access</li>
+                            <li><i class="fas fa-check"></i> Networking events</li>
+                            <li><i class="fas fa-check"></i> Conference materials</li>
+                            <li><i class="fas fa-check"></i> Lunch included</li>
+                        </ul>
+                    </div>
+                    <a href="#" class="ticket-btn">Get Ticket</a>
+                </div>
+
+                <div class="ticket-card featured" data-aos="fade-up" data-aos-delay="200">
+                    <div class="ticket-badge">Most Popular</div>
+                    <div class="ticket-header">
+                        <h3>VIP Pass</h3>
+                        <div class="ticket-price">
+                            <span class="currency">$</span>
+                            <span class="amount">599</span>
+                            <span class="period">/person</span>
+                        </div>
+                    </div>
+                    <div class="ticket-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Everything in Early Bird</li>
+                            <li><i class="fas fa-check"></i> VIP seating</li>
+                            <li><i class="fas fa-check"></i> Speaker meet & greet</li>
+                            <li><i class="fas fa-check"></i> Exclusive workshops</li>
+                            <li><i class="fas fa-check"></i> Premium networking</li>
+                        </ul>
+                    </div>
+                    <a href="#" class="ticket-btn">Get Ticket</a>
+                </div>
+
+                <div class="ticket-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="ticket-header">
+                        <h3>Student</h3>
+                        <div class="ticket-price">
+                            <span class="currency">$</span>
+                            <span class="amount">149</span>
+                            <span class="period">/person</span>
+                        </div>
+                    </div>
+                    <div class="ticket-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Full conference access</li>
+                            <li><i class="fas fa-check"></i> Student workshops</li>
+                            <li><i class="fas fa-check"></i> Career fair access</li>
+                            <li><i class="fas fa-check"></i> Student networking</li>
+                        </ul>
+                    </div>
+                    <a href="#" class="ticket-btn">Get Ticket</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-bolt"></i>
+                        <span>TechConf 2024</span>
+                    </div>
+                    <p>Shaping the future of technology through innovation, collaboration, and inspiration.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#speakers">Speakers</a></li>
+                        <li><a href="#schedule">Schedule</a></li>
+                        <li><a href="#tickets">Tickets</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> info@techconf2024.com</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-map-marker-alt"></i> San Francisco, CA</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 TechConf. All rights reserved.</p>
+                <a href="Documentation/index.html">Documentation</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

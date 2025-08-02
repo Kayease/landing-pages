@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/images/velox-logo.png" type="image/png">
+    <title>Products - VELOX Athletic Footwear</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/products.css">
+</head>
+
+<body>
+    <!-- Page Loader -->
+    <div class="loader-wrapper">
+        <div class="loader">
+            <div class="velox-logo-loader"></div>
+        </div>
+    </div>
+
+
+    <!-- Header / Navigation -->
+    <header class="header fixed-top">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <div class="velox-logo">
+                        <span class="logo-v">V</span>
+                        <span class="logo-speed-lines"></span>
+                    </div>
+                    <span class="brand-text">VELOX</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="products.html">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Documentation/index.html">Documentation</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h1 class="page-title" data-aos="fade-up">Our Products</h1>
+                    <p class="page-subtitle" data-aos="fade-up" data-aos-delay="200">Discover the perfect footwear for
+                        your athletic journey</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="filter-buttons text-center" data-aos="fade-up">
+                        <button class="filter-btn active" data-filter="all">All Products</button>
+                        <button class="filter-btn" data-filter="running">Running</button>
+                        <button class="filter-btn" data-filter="basketball">Basketball</button>
+                        <button class="filter-btn" data-filter="training">Training</button>
+                        <button class="filter-btn" data-filter="lifestyle">Lifestyle</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="products-grid section-padding">
+        <div class="container">
+            <div class="row g-4" id="productsContainer">
+                <!-- Running Products -->
+                <div class="col-lg-4 col-md-6 product-item" data-category="running">
+                    <div class="product-card" data-aos="fade-up">
+                        <div class="product-image">
+                            <img src="assets/images/shoe-1.jpg" alt="Velocity Pro Running">
+                            <div class="product-overlay">
+                                <button class="btn btn-primary quick-view-btn" data-product="velocity-pro">Quick
+                                    View</button>
+                                <button class="btn btn-outline-white add-to-cart-btn">Add to Cart</button>
+                            </div>
+                            <div class="product-badge new">New</div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Velocity Pro Running</h3>
+                            <p class="product-description">Maximum comfort with visible VeloFoam cushioning</p>
+                            <div class="product-meta">
+                                <div class="product-price">$150</div>
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>(4.8)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 product-item" data-category="running">
+                    <div class="product-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="product-image">
+                            <img src="assets/images/shoe-2.jpg" alt="Sprint Elite">
+                            <div class="product-overlay">
+                                <button class="btn btn-primary quick-view-btn" data-product="sprint-elite">Quick
+                                    View</button>
+                                <button class="btn btn-outline-white add-to-cart-btn">Add to Cart</button>
+                            </div>
+                            <div class="product-badge sale">Sale</div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Sprint Elite</h3>
+                            <p class="product-description">Lightweight racing shoes for elite performance</p>
+                            <div class="product-meta">
+                                <div class="product-price">
+                                    <span class="original-price">$180</span>
+                                    <span class="sale-price">$140</span>
+                                </div>
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>(4.9)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Basketball Products -->
+                <div class="col-lg-4 col-md-6 product-item" data-category="basketball">
+                    <div class="product-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="product-image">
+                            <img src="assets/images/shoe-3.jpg" alt="Thunder Elite Basketball">
+                            <div class="product-overlay">
+                                <button class="btn btn-primary quick-view-btn" data-product="thunder-elite">Quick
+                                    View</button>
+                                <button class="btn btn-outline-white add-to-cart-btn">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Thunder Elite Basketball</h3>
+                            <p class="product-description">Iconic basketball heritage meets street style</p>
+                            <div class="product-meta">
+                                <div class="product-price">$170</div>
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>(4.7)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Training Products -->
+                <div class="col-lg-4 col-md-6 product-item" data-category="training">
+                    <div class="product-card" data-aos="fade-up">
+                        <div class="product-image">
+                            <img src="assets/images/shoe-1.jpg" alt="Power Trainer">
+                            <div class="product-overlay">
+                                <button class="btn btn-primary quick-view-btn" data-product="power-trainer">Quick
+                                    View</button>
+                                <button class="btn btn-outline-white add-to-cart-btn">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Power Trainer</h3>
+                            <p class="product-description">Versatile training shoes for all workouts</p>
+                            <div class="product-meta">
+                                <div class="product-price">$130</div>
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>(4.6)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lifestyle Products -->
+                <div class="col-lg-4 col-md-6 product-item" data-category="lifestyle">
+                    <div class="product-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="product-image">
+                            <img src="assets/images/shoe-2.jpg" alt="Urban Walker">
+                            <div class="product-overlay">
+                                <button class="btn btn-primary quick-view-btn" data-product="urban-walker">Quick
+                                    View</button>
+                                <button class="btn btn-outline-white add-to-cart-btn">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Urban Walker</h3>
+                            <p class="product-description">Comfortable lifestyle shoes for everyday wear</p>
+                            <div class="product-meta">
+                                <div class="product-price">$110</div>
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>(4.5)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 product-item" data-category="lifestyle">
+                    <div class="product-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="product-image">
+                            <img src="assets/images/shoe-3.jpg" alt="Street Classic">
+                            <div class="product-overlay">
+                                <button class="btn btn-primary quick-view-btn" data-product="street-classic">Quick
+                                    View</button>
+                                <button class="btn btn-outline-white add-to-cart-btn">Add to Cart</button>
+                            </div>
+                            <div class="product-badge limited">Limited</div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Street Classic</h3>
+                            <p class="product-description">Timeless design meets modern comfort</p>
+                            <div class="product-meta">
+                                <div class="product-price">$95</div>
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>(4.4)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Quick View Modal -->
+    <div class="modal fade" id="quickViewModal" tabindex="-1" aria-labelledby="quickViewModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="quickViewModalLabel">Product Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="product-modal-image">
+                                <img src="" alt="Product" id="modalProductImage" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="product-modal-info">
+                                <h3 id="modalProductName"></h3>
+                                <div class="product-modal-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>(4.8)</span>
+                                </div>
+                                <div class="product-modal-price" id="modalProductPrice"></div>
+                                <p id="modalProductDescription"></p>
+
+                                <div class="product-modal-options">
+                                    <div class="size-selector">
+                                        <label>Size:</label>
+                                        <select class="form-select">
+                                            <option>7</option>
+                                            <option>8</option>
+                                            <option>9</option>
+                                            <option>10</option>
+                                            <option>11</option>
+                                            <option>12</option>
+                                        </select>
+                                    </div>
+                                    <div class="quantity-selector">
+                                        <label>Quantity:</label>
+                                        <div class="quantity-controls">
+                                            <button class="btn btn-sm btn-outline-secondary" id="decreaseQty">-</button>
+                                            <input type="number" value="1" min="1" class="form-control" id="quantity">
+                                            <button class="btn btn-sm btn-outline-secondary" id="increaseQty">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="product-modal-actions">
+                                    <button class="btn btn-primary btn-lg">Add to Cart</button>
+                                    <button class="btn btn-outline-secondary btn-lg">Add to Wishlist</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="footer-widget">
+                        <div class="footer-logo mb-3">
+                            <a class="navbar-brand" href="#">
+                                <div class="velox-logo">
+                                    <span class="logo-v">V</span>
+                                    <span class="logo-speed-lines"></span>
+                                </div>
+                                <span class="brand-text">VELOX</span>
+                            </a>
+                        </div>
+                        <p class="text-light">Just Do It. Bringing inspiration and innovation to every athlete in the
+                            world.</p>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <div class="footer-widget">
+                        <h5 class="footer-title">Products</h5>
+                        <ul class="footer-links">
+                            <li><a href="#">Shoes</a></li>
+                            <li><a href="#">Clothing</a></li>
+                            <li><a href="#">Accessories</a></li>
+                            <li><a href="#">New Releases</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <div class="footer-widget">
+                        <h5 class="footer-title">Sports</h5>
+                        <ul class="footer-links">
+                            <li><a href="#">Running</a></li>
+                            <li><a href="#">Basketball</a></li>
+                            <li><a href="#">Football</a></li>
+                            <li><a href="#">Training</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <div class="footer-widget">
+                        <h5 class="footer-title">Support</h5>
+                        <ul class="footer-links">
+                            <li><a href="#">Size Guide</a></li>
+                            <li><a href="#">Returns</a></li>
+                            <li><a href="#">Shipping</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <div class="footer-widget">
+                        <h5 class="footer-title">Company</h5>
+                        <ul class="footer-links">
+                            <li><a href="#">About VELOX</a></li>
+                            <li><a href="#">News</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Investors</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom mt-5 pt-4">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="text-light mb-0">&copy; 2024 VELOX, Inc. All Rights Reserved.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="footer-bottom-links">
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Use</a></li>
+                            <li><a href="#">Cookies</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Custom JS -->
+    <script src="./js/main.js"></script>
+    <script src="./js/products.js"></script>
+    <script src="./js/enhanced-3d.js"></script>
+</body>
+
+</html>
