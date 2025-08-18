@@ -113,12 +113,21 @@ body {
     letter-spacing: 1px;
     padding: 10px 20px;
     transition: all 0.3s ease;
+    display: inline-block;
+    text-align: center;
+    min-height: 44px;
 }
 
 .demo-card .btn:hover {
     background-color: #c0392b;
     border-color: #c0392b;
     transform: translateY(-2px);
+}
+
+/* Demo card button container */
+.demo-card .btn-container {
+    text-align: center;
+    margin-top: 15px;
 }
 
 h2 {
@@ -201,6 +210,56 @@ pre code {
     .demo-card {
         margin-bottom: 15px;
     }
+    
+    /* Mobile button improvements */
+    .btn {
+        width: 100%;
+        max-width: 300px;
+        margin: 5px 0;
+        padding: 12px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .btn-container {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+    
+    .demo-card .btn {
+        width: 100%;
+        max-width: 250px;
+        margin: 10px auto;
+        display: block;
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 576px) {
+    .btn {
+        width: 100%;
+        max-width: 280px;
+        padding: 10px 16px;
+        font-size: 0.85rem;
+        min-height: 40px;
+    }
+    
+    .btn-container {
+        gap: 8px;
+    }
+    
+    .demo-card .btn {
+        max-width: 220px;
+        margin: 8px auto;
+    }
+    
+    #masthead h1 {
+        font-size: 2rem;
+    }
+    
+    #masthead .lead {
+        font-size: 1rem;
+    }
 }
 
 /* Sticky Sidebar */
@@ -281,6 +340,11 @@ table th {
     text-transform: uppercase;
     letter-spacing: 0.5px;
     transition: all 0.3s ease;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .btn-primary {
@@ -291,6 +355,15 @@ table th {
 .btn-primary:hover {
     background-color: #c0392b;
     border-color: #c0392b;
+}
+
+/* Button containers for proper centering */
+.btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
 /* Print Styles */

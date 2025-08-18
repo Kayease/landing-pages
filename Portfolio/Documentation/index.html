@@ -2,9 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <title>Alex Chen - Portfolio Documentation</title>
-    <meta name="description" content="Complete documentation for Alex Chen's portfolio template">
+    <meta name="description" content="Complete documentation for Alex Chen's portfolio template - Setup, customization, and deployment guide">
+    <meta name="keywords" content="portfolio, documentation, web development, responsive design, CSS, JavaScript, HTML">
+    <meta name="author" content="Alex Chen">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#667eea">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Alex Chen - Portfolio Documentation">
+    <meta property="og:description" content="Complete documentation for Alex Chen's portfolio template">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://alexchen.dev/documentation">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Alex Chen - Portfolio Documentation">
+    <meta name="twitter:description" content="Complete documentation for Alex Chen's portfolio template">
     
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -14,87 +29,94 @@
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/documentation.css">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="css/documentation.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
 </head>
 <body>
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="nav-container">
             <div class="nav-brand">
-                <a href="../index.html" class="brand-link">
-                    <i class="fas fa-code"></i>
+                <a href="../index.html" class="brand-link" aria-label="Back to Portfolio">
+                    <i class="fas fa-code" aria-hidden="true"></i>
                     <span>Alex Chen</span>
                 </a>
             </div>
             <div class="nav-links">
-                <a href="../index.html" class="nav-link">
-                    <i class="fas fa-home"></i>
+                <a href="../index.html" class="nav-link" aria-label="Back to Portfolio">
+                    <i class="fas fa-home" aria-hidden="true"></i>
                     <span>Home</span>
                 </a>
-                <a href="https://alexchen.dev/" class="nav-link" target="_blank">
-                    <i class="fas fa-globe"></i>
-                    <span>Website</span>
+                <a href="#introduction" class="nav-link" aria-label="Go to Introduction">
+                    <i class="fas fa-book" aria-hidden="true"></i>
+                    <span>Docs</span>
                 </a>
             </div>
-            <button class="mobile-menu-toggle" id="mobile-menu-toggle">
-                <i class="fas fa-bars"></i>
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="sidebar">
+                <i class="fas fa-bars" aria-hidden="true"></i>
             </button>
         </div>
     </nav>
 
     <div class="documentation-wrapper">
         <!-- Sidebar -->
-        <aside class="sidebar" id="sidebar">
+        <aside class="sidebar" id="sidebar" role="complementary" aria-label="Documentation navigation">
             <div class="sidebar-header">
                 <h3>Documentation</h3>
-                <button class="sidebar-close" id="sidebar-close">
-                    <i class="fas fa-times"></i>
+                <button class="sidebar-close" id="sidebar-close" aria-label="Close navigation">
+                    <i class="fas fa-times" aria-hidden="true"></i>
                 </button>
             </div>
-            <nav class="sidebar-nav">
+            <nav class="sidebar-nav" role="navigation" aria-label="Documentation sections">
                 <div class="nav-section">
                     <h4>Getting Started</h4>
-                    <a href="#introduction" class="nav-item">
-                        <i class="fas fa-rocket"></i>
+                    <a href="#introduction" class="nav-item" aria-label="Introduction section">
+                        <i class="fas fa-rocket" aria-hidden="true"></i>
                         <span>Introduction</span>
                     </a>
-                    <a href="#installation" class="nav-item">
-                        <i class="fas fa-download"></i>
+                    <a href="#installation" class="nav-item" aria-label="Installation guide">
+                        <i class="fas fa-download" aria-hidden="true"></i>
                         <span>Installation</span>
                     </a>
-                    <a href="#quick-start" class="nav-item">
-                        <i class="fas fa-play"></i>
+                    <a href="#quick-start" class="nav-item" aria-label="Quick start guide">
+                        <i class="fas fa-play" aria-hidden="true"></i>
                         <span>Quick Start</span>
                     </a>
                 </div>
                 
                 <div class="nav-section">
                     <h4>Customization</h4>
-                    <a href="#personalization" class="nav-item">
-                        <i class="fas fa-user-edit"></i>
+                    <a href="#personalization" class="nav-item" aria-label="Personalization guide">
+                        <i class="fas fa-user-edit" aria-hidden="true"></i>
                         <span>Personalization</span>
                     </a>
-                    <a href="#styling" class="nav-item">
-                        <i class="fas fa-palette"></i>
+                    <a href="#styling" class="nav-item" aria-label="Styling and colors">
+                        <i class="fas fa-palette" aria-hidden="true"></i>
                         <span>Styling & Colors</span>
                     </a>
                 </div>
                 
                 <div class="nav-section">
                     <h4>Features</h4>
-                    <a href="#components" class="nav-item">
-                        <i class="fas fa-puzzle-piece"></i>
+                    <a href="#components" class="nav-item" aria-label="Components overview">
+                        <i class="fas fa-puzzle-piece" aria-hidden="true"></i>
                         <span>Components</span>
                     </a>
-                    <a href="#responsive" class="nav-item">
-                        <i class="fas fa-mobile-alt"></i>
+                    <a href="#responsive" class="nav-item" aria-label="Responsive design">
+                        <i class="fas fa-mobile-alt" aria-hidden="true"></i>
                         <span>Responsive Design</span>
                     </a>
                 </div>
                 
                 <div class="nav-section">
                     <h4>Support</h4>
-                    <a href="#contact" class="nav-item">
-                        <i class="fas fa-envelope"></i>
+                    <a href="#contact" class="nav-item" aria-label="Contact support">
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
                         <span>Contact Support</span>
                     </a>
                 </div>
@@ -102,55 +124,55 @@
         </aside>
 
         <!-- Main Content -->
-        <main class="main-content">
+        <main class="main-content" id="main-content" role="main">
             <div class="content-wrapper">
                 <!-- Introduction -->
                 <section id="introduction" class="doc-section">
                     <div class="section-header">
                         <h1>Alex Chen Portfolio Documentation</h1>
                         <p class="section-subtitle">
-                            A comprehensive guide to setting up, customizing, and deploying your professional portfolio website.
+                            A comprehensive guide to setting up, customizing, and deploying your professional portfolio website with modern web technologies.
                         </p>
                     </div>
                     
                     <div class="feature-highlights">
-                        <div class="feature-card">
+                        <div class="feature-card" tabindex="0" role="article">
                             <div class="feature-icon">
-                                <i class="fas fa-mobile-alt"></i>
+                                <i class="fas fa-mobile-alt" aria-hidden="true"></i>
                             </div>
                             <h3>Responsive Design</h3>
-                            <p>Perfect on all devices and screen sizes</p>
+                            <p>Perfect on all devices and screen sizes with mobile-first approach</p>
                         </div>
-                        <div class="feature-card">
+                        <div class="feature-card" tabindex="0" role="article">
                             <div class="feature-icon">
-                                <i class="fas fa-magic"></i>
+                                <i class="fas fa-magic" aria-hidden="true"></i>
                             </div>
                             <h3>Modern Animations</h3>
-                            <p>Smooth scroll animations and interactions</p>
+                            <p>Smooth scroll animations and interactive elements for better UX</p>
                         </div>
-                        <div class="feature-card">
+                        <div class="feature-card" tabindex="0" role="article">
                             <div class="feature-icon">
-                                <i class="fas fa-palette"></i>
+                                <i class="fas fa-palette" aria-hidden="true"></i>
                             </div>
                             <h3>Easy Customization</h3>
-                            <p>Well-organized code for easy modifications</p>
+                            <p>Well-organized code structure for easy modifications and updates</p>
                         </div>
-                        <div class="feature-card">
+                        <div class="feature-card" tabindex="0" role="article">
                             <div class="feature-icon">
-                                <i class="fas fa-rocket"></i>
+                                <i class="fas fa-rocket" aria-hidden="true"></i>
                             </div>
                             <h3>Fast Performance</h3>
-                            <p>Optimized for speed and efficiency</p>
+                            <p>Optimized for speed and efficiency with modern web standards</p>
                         </div>
                     </div>
                     
                     <div class="info-box">
                         <div class="info-icon">
-                            <i class="fas fa-info-circle"></i>
+                            <i class="fas fa-info-circle" aria-hidden="true"></i>
                         </div>
                         <div class="info-content">
                             <h4>About This Template</h4>
-                            <p>This portfolio template is designed by Alex Chen and uses modern web technologies including CSS Grid, Flexbox, and JavaScript ES6+. It's perfect for developers, designers, and creative professionals looking to showcase their work.</p>
+                            <p>This portfolio template is designed by Alex Chen and uses modern web technologies including CSS Grid, Flexbox, and JavaScript ES6+. It's perfect for developers, designers, and creative professionals looking to showcase their work with a professional and modern approach.</p>
                         </div>
                     </div>
                 </section>
@@ -158,14 +180,14 @@
                 <!-- Installation -->
                 <section id="installation" class="doc-section">
                     <h2>Installation Guide</h2>
-                    <p>Follow these steps to get your portfolio up and running quickly.</p>
+                    <p>Follow these steps to get your portfolio up and running quickly and efficiently.</p>
                     
                     <div class="step-container">
-                        <div class="step-number">1</div>
+                        <div class="step-number" aria-label="Step 1">1</div>
                         <div class="step-content">
                             <h3>Download the Template</h3>
-                            <p>Download the Alex Chen Portfolio template files from your preferred marketplace or source.</p>
-                            <div class="code-block">
+                            <p>Download the Alex Chen Portfolio template files from your preferred marketplace or source repository.</p>
+                            <div class="code-block" role="region" aria-label="Terminal commands">
                                 <div class="code-header">
                                     <span>Terminal</span>
                                 </div>
@@ -181,11 +203,11 @@ cd portfolio-template</code></pre>
                     </div>
                     
                     <div class="step-container">
-                        <div class="step-number">2</div>
+                        <div class="step-number" aria-label="Step 2">2</div>
                         <div class="step-content">
                             <h3>File Structure</h3>
-                            <p>Understand the organization of your template files.</p>
-                            <div class="code-block">
+                            <p>Understand the organization of your template files for easy navigation and customization.</p>
+                            <div class="code-block" role="region" aria-label="File structure">
                                 <div class="code-header">
                                     <span>File Structure</span>
                                 </div>
@@ -206,17 +228,17 @@ cd portfolio-template</code></pre>
                     </div>
                     
                     <div class="step-container">
-                        <div class="step-number">3</div>
+                        <div class="step-number" aria-label="Step 3">3</div>
                         <div class="step-content">
                             <h3>Upload to Server</h3>
-                            <p>Upload all files to your web server using FTP, cPanel, or your preferred method.</p>
+                            <p>Upload all files to your web server using FTP, cPanel, or your preferred deployment method.</p>
                             <div class="info-box warning">
                                 <div class="info-icon">
-                                    <i class="fas fa-exclamation-triangle"></i>
+                                    <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
                                 </div>
                                 <div class="info-content">
                                     <h4>Important Note</h4>
-                                    <p>Make sure to maintain the file structure when uploading to your server. All relative paths depend on this structure.</p>
+                                    <p>Make sure to maintain the file structure when uploading to your server. All relative paths depend on this structure for proper functionality.</p>
                                 </div>
                             </div>
                         </div>
@@ -226,13 +248,13 @@ cd portfolio-template</code></pre>
                 <!-- Quick Start -->
                 <section id="quick-start" class="doc-section">
                     <h2>Quick Start Guide</h2>
-                    <p>Get your portfolio live in minutes with these essential customizations.</p>
+                    <p>Get your portfolio live in minutes with these essential customizations and optimizations.</p>
                     
                     <div class="customization-grid">
-                        <div class="customization-card">
+                        <div class="customization-card" tabindex="0" role="article">
                             <h3>1. Update Personal Information</h3>
-                            <p>Replace the placeholder content with your own information.</p>
-                            <div class="code-block">
+                            <p>Replace the placeholder content with your own information and branding.</p>
+                            <div class="code-block" role="region" aria-label="HTML personalization">
                                 <div class="code-header">
                                     <span>HTML</span>
                                 </div>
@@ -248,10 +270,10 @@ cd portfolio-template</code></pre>
                             </div>
                         </div>
                         
-                        <div class="customization-card">
+                        <div class="customization-card" tabindex="0" role="article">
                             <h3>2. Customize Colors</h3>
-                            <p>Update the color scheme to match your brand.</p>
-                            <div class="code-block">
+                            <p>Update the color scheme to match your brand identity and preferences.</p>
+                            <div class="code-block" role="region" aria-label="CSS color customization">
                                 <div class="code-header">
                                     <span>CSS</span>
                                 </div>
@@ -265,10 +287,10 @@ cd portfolio-template</code></pre>
                             </div>
                         </div>
                         
-                        <div class="customization-card">
+                        <div class="customization-card" tabindex="0" role="article">
                             <h3>3. Add Your Projects</h3>
-                            <p>Replace the portfolio projects with your own work.</p>
-                            <div class="code-block">
+                            <p>Replace the portfolio projects with your own work and achievements.</p>
+                            <div class="code-block" role="region" aria-label="HTML project structure">
                                 <div class="code-header">
                                     <span>HTML</span>
                                 </div>
@@ -290,46 +312,46 @@ cd portfolio-template</code></pre>
                 <!-- Personalization -->
                 <section id="personalization" class="doc-section">
                     <h2>Personalization</h2>
-                    <p>Make the portfolio truly yours by customizing every aspect.</p>
+                    <p>Make the portfolio truly yours by customizing every aspect to reflect your unique style and expertise.</p>
                     
                     <div class="content-grid">
-                        <div class="content-card">
+                        <div class="content-card" tabindex="0" role="article">
                             <h3>Profile Information</h3>
                             <ul class="feature-list">
-                                <li>Update name, title, and bio</li>
-                                <li>Add your profile picture</li>
-                                <li>Customize contact details</li>
-                                <li>Update social media links</li>
+                                <li>Update name, title, and professional bio</li>
+                                <li>Add your professional profile picture</li>
+                                <li>Customize contact details and location</li>
+                                <li>Update social media links and handles</li>
                             </ul>
                         </div>
                         
-                        <div class="content-card">
+                        <div class="content-card" tabindex="0" role="article">
                             <h3>Skills & Expertise</h3>
                             <ul class="feature-list">
-                                <li>Modify skill percentages</li>
-                                <li>Add or remove skills</li>
-                                <li>Update technology stack</li>
-                                <li>Customize experience timeline</li>
+                                <li>Modify skill percentages and categories</li>
+                                <li>Add or remove skills based on your expertise</li>
+                                <li>Update technology stack and tools</li>
+                                <li>Customize experience timeline and achievements</li>
                             </ul>
                         </div>
                         
-                        <div class="content-card">
+                        <div class="content-card" tabindex="0" role="article">
                             <h3>Portfolio Projects</h3>
                             <ul class="feature-list">
-                                <li>Add your own projects</li>
-                                <li>Include project images</li>
-                                <li>Update project descriptions</li>
-                                <li>Add live demo links</li>
+                                <li>Add your own projects with high-quality images</li>
+                                <li>Include detailed project descriptions</li>
+                                <li>Update project technologies and features</li>
+                                <li>Add live demo links and GitHub repositories</li>
                             </ul>
                         </div>
                         
-                        <div class="content-card">
+                        <div class="content-card" tabindex="0" role="article">
                             <h3>Testimonials</h3>
                             <ul class="feature-list">
-                                <li>Add client testimonials</li>
-                                <li>Include client photos</li>
-                                <li>Update company names</li>
-                                <li>Customize testimonial text</li>
+                                <li>Add authentic client testimonials</li>
+                                <li>Include professional client photos</li>
+                                <li>Update company names and positions</li>
+                                <li>Customize testimonial content and ratings</li>
                             </ul>
                         </div>
                     </div>
@@ -338,27 +360,27 @@ cd portfolio-template</code></pre>
                 <!-- Styling -->
                 <section id="styling" class="doc-section">
                     <h2>Styling & Colors</h2>
-                    <p>Customize the visual appearance to match your brand identity.</p>
+                    <p>Customize the visual appearance to match your brand identity and create a memorable user experience.</p>
                     
                     <div class="color-palette">
                         <h3>Color Scheme</h3>
                         <div class="color-grid">
-                            <div class="color-item">
-                                <div class="color-swatch primary"></div>
+                            <div class="color-item" tabindex="0" role="article">
+                                <div class="color-swatch primary" aria-label="Primary color swatch"></div>
                                 <div class="color-info">
                                     <h4>Primary Color</h4>
                                     <p>#667eea</p>
                                 </div>
                             </div>
-                            <div class="color-item">
-                                <div class="color-swatch secondary"></div>
+                            <div class="color-item" tabindex="0" role="article">
+                                <div class="color-swatch secondary" aria-label="Secondary color swatch"></div>
                                 <div class="color-info">
                                     <h4>Secondary Color</h4>
                                     <p>#764ba2</p>
                                 </div>
                             </div>
-                            <div class="color-item">
-                                <div class="color-swatch accent"></div>
+                            <div class="color-item" tabindex="0" role="article">
+                                <div class="color-swatch accent" aria-label="Accent color swatch"></div>
                                 <div class="color-info">
                                     <h4>Accent Color</h4>
                                     <p>#f093fb</p>
@@ -367,7 +389,7 @@ cd portfolio-template</code></pre>
                         </div>
                     </div>
                     
-                    <div class="code-block">
+                    <div class="code-block" role="region" aria-label="CSS variables">
                         <div class="code-header">
                             <span>CSS Variables</span>
                         </div>
@@ -398,12 +420,12 @@ body {
                 <!-- Components -->
                 <section id="components" class="doc-section">
                     <h2>Components</h2>
-                    <p>Learn about the key components and how to customize them.</p>
+                    <p>Learn about the key components and how to customize them for optimal performance and user experience.</p>
                     
                     <div class="component-grid">
-                        <div class="component-card">
+                        <div class="component-card" tabindex="0" role="article">
                             <h3>Navigation</h3>
-                            <p>Fixed header with smooth scroll effects and mobile menu.</p>
+                            <p>Fixed header with smooth scroll effects and responsive mobile menu for optimal navigation.</p>
                             <div class="component-features">
                                 <span class="feature-tag">Responsive</span>
                                 <span class="feature-tag">Smooth Scroll</span>
@@ -411,9 +433,9 @@ body {
                             </div>
                         </div>
                         
-                        <div class="component-card">
+                        <div class="component-card" tabindex="0" role="article">
                             <h3>Hero Section</h3>
-                            <p>Animated text, particle effects, and call-to-action buttons.</p>
+                            <p>Animated text, particle effects, and call-to-action buttons for engaging user interaction.</p>
                             <div class="component-features">
                                 <span class="feature-tag">Typewriter Effect</span>
                                 <span class="feature-tag">Particle Background</span>
@@ -421,9 +443,9 @@ body {
                             </div>
                         </div>
                         
-                        <div class="component-card">
+                        <div class="component-card" tabindex="0" role="article">
                             <h3>Portfolio Carousel</h3>
-                            <p>Interactive carousel for showcasing projects with navigation.</p>
+                            <p>Interactive carousel for showcasing projects with touch navigation and responsive design.</p>
                             <div class="component-features">
                                 <span class="feature-tag">Touch Swipe</span>
                                 <span class="feature-tag">Navigation Controls</span>
@@ -431,9 +453,9 @@ body {
                             </div>
                         </div>
                         
-                        <div class="component-card">
+                        <div class="component-card" tabindex="0" role="article">
                             <h3>Contact Form</h3>
-                            <p>Functional contact form with validation and styling.</p>
+                            <p>Functional contact form with validation, accessibility features, and modern styling.</p>
                             <div class="component-features">
                                 <span class="feature-tag">Form Validation</span>
                                 <span class="feature-tag">Responsive Design</span>
@@ -446,45 +468,45 @@ body {
                 <!-- Responsive Design -->
                 <section id="responsive" class="doc-section">
                     <h2>Responsive Design</h2>
-                    <p>The template is fully responsive with optimized layouts for all devices.</p>
+                    <p>The template is fully responsive with optimized layouts for all devices and screen sizes.</p>
                     
                     <div class="responsive-breakpoints">
-                        <div class="breakpoint-card">
+                        <div class="breakpoint-card" tabindex="0" role="article">
                             <div class="breakpoint-icon">
-                                <i class="fas fa-mobile-alt"></i>
+                                <i class="fas fa-mobile-alt" aria-hidden="true"></i>
                             </div>
                             <h3>Mobile (≤768px)</h3>
                             <ul>
-                                <li>Single column layout</li>
-                                <li>Mobile menu navigation</li>
-                                <li>Optimized touch targets</li>
-                                <li>Reduced text sizes</li>
+                                <li>Single column layout for optimal readability</li>
+                                <li>Mobile menu navigation with touch support</li>
+                                <li>Optimized touch targets for better usability</li>
+                                <li>Reduced text sizes for mobile screens</li>
                             </ul>
                         </div>
                         
-                        <div class="breakpoint-card">
+                        <div class="breakpoint-card" tabindex="0" role="article">
                             <div class="breakpoint-icon">
-                                <i class="fas fa-tablet-alt"></i>
+                                <i class="fas fa-tablet-alt" aria-hidden="true"></i>
                             </div>
                             <h3>Tablet (768px - 1024px)</h3>
                             <ul>
-                                <li>Two-column layouts</li>
-                                <li>Medium text sizes</li>
-                                <li>Touch-friendly interactions</li>
-                                <li>Optimized spacing</li>
+                                <li>Two-column layouts for better content organization</li>
+                                <li>Medium text sizes for comfortable reading</li>
+                                <li>Touch-friendly interactions and gestures</li>
+                                <li>Optimized spacing and padding</li>
                             </ul>
                         </div>
                         
-                        <div class="breakpoint-card">
+                        <div class="breakpoint-card" tabindex="0" role="article">
                             <div class="breakpoint-icon">
-                                <i class="fas fa-desktop"></i>
+                                <i class="fas fa-desktop" aria-hidden="true"></i>
                             </div>
                             <h3>Desktop (≥1024px)</h3>
                             <ul>
-                                <li>Full desktop layout</li>
-                                <li>Large text sizes</li>
-                                <li>Hover effects</li>
-                                <li>Maximum content width</li>
+                                <li>Full desktop layout with maximum content width</li>
+                                <li>Large text sizes for optimal readability</li>
+                                <li>Hover effects and advanced interactions</li>
+                                <li>Enhanced visual hierarchy and spacing</li>
                             </ul>
                         </div>
                     </div>
@@ -493,41 +515,41 @@ body {
                 <!-- Contact Support -->
                 <section id="contact" class="doc-section">
                     <h2>Contact Support</h2>
-                    <p>Need help? Here's how to get in touch.</p>
+                    <p>Need help with customization or have technical questions? Here's how to get in touch with our support team.</p>
                     
                     <div class="support-options">
-                        <div class="support-card">
+                        <div class="support-card" tabindex="0" role="article">
                             <div class="support-icon">
-                                <i class="fas fa-envelope"></i>
+                                <i class="fas fa-envelope" aria-hidden="true"></i>
                             </div>
                             <h3>Email Support</h3>
-                            <p>Get direct help with customization and technical issues.</p>
-                            <a href="mailto:support@alexchen.dev" class="support-link">
-                                <i class="fas fa-arrow-right"></i>
+                            <p>Get direct help with customization and technical issues from our expert team.</p>
+                            <a href="mailto:support@alexchen.dev" class="support-link" aria-label="Send email to support">
+                                <i class="fas fa-arrow-right" aria-hidden="true"></i>
                                 Send Email
                             </a>
                         </div>
                         
-                        <div class="support-card">
+                        <div class="support-card" tabindex="0" role="article">
                             <div class="support-icon">
-                                <i class="fab fa-github"></i>
+                                <i class="fab fa-github" aria-hidden="true"></i>
                             </div>
                             <h3>GitHub Issues</h3>
-                            <p>Report bugs and request features on GitHub.</p>
-                            <a href="https://github.com/alexchen-dev/portfolio-template/issues" class="support-link" target="_blank">
-                                <i class="fas fa-arrow-right"></i>
+                            <p>Report bugs, request features, and contribute to the project on GitHub.</p>
+                            <a href="https://github.com/alexchen-dev/portfolio-template/issues" class="support-link" target="_blank" rel="noopener noreferrer" aria-label="View GitHub issues">
+                                <i class="fas fa-arrow-right" aria-hidden="true"></i>
                                 View Issues
                             </a>
                         </div>
                         
-                        <div class="support-card">
+                        <div class="support-card" tabindex="0" role="article">
                             <div class="support-icon">
-                                <i class="fas fa-globe"></i>
+                                <i class="fas fa-globe" aria-hidden="true"></i>
                             </div>
                             <h3>Website</h3>
-                            <p>Visit our website for more information and updates.</p>
-                            <a href="https://alexchen.dev" class="support-link" target="_blank">
-                                <i class="fas fa-arrow-right"></i>
+                            <p>Visit our website for more information, updates, and additional resources.</p>
+                            <a href="https://alexchen.dev" class="support-link" target="_blank" rel="noopener noreferrer" aria-label="Visit Alex Chen's website">
+                                <i class="fas fa-arrow-right" aria-hidden="true"></i>
                                 Visit Website
                             </a>
                         </div>
@@ -538,16 +560,16 @@ body {
     </div>
 
     <!-- Footer -->
-    <footer class="doc-footer">
+    <footer class="doc-footer" role="contentinfo">
         <div class="footer-content">
             <div class="footer-brand">
-                <i class="fas fa-code"></i>
+                <i class="fas fa-code" aria-hidden="true"></i>
                 <span>Alex Chen</span>
             </div>
             <div class="footer-links">
-                <a href="../index.html">Back to Portfolio</a>
-                <a href="https://alexchen.dev" target="_blank">Website</a>
-                <a href="https://github.com/alexchen-dev" target="_blank">GitHub</a>
+                <a href="../index.html" aria-label="Back to Portfolio">Back to Portfolio</a>
+                <a href="https://alexchen.dev" target="_blank" rel="noopener noreferrer" aria-label="Visit Alex Chen's website">Website</a>
+                <a href="https://github.com/alexchen-dev" target="_blank" rel="noopener noreferrer" aria-label="Visit Alex Chen's GitHub">GitHub</a>
             </div>
         </div>
         <div class="footer-bottom">
@@ -556,20 +578,50 @@ body {
     </footer>
 
     <script>
-        // Mobile menu toggle
+        // Enhanced mobile menu functionality with better accessibility
         const mobileToggle = document.getElementById('mobile-menu-toggle');
         const sidebar = document.getElementById('sidebar');
         const sidebarClose = document.getElementById('sidebar-close');
         
-        mobileToggle.addEventListener('click', () => {
-            sidebar.classList.add('active');
-        });
+        function toggleSidebar() {
+            const isActive = sidebar.classList.contains('active');
+            sidebar.classList.toggle('active');
+            mobileToggle.setAttribute('aria-expanded', !isActive);
+            
+            // Prevent body scroll when sidebar is open
+            if (!isActive) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
+        }
         
-        sidebarClose.addEventListener('click', () => {
+        function closeSidebar() {
             sidebar.classList.remove('active');
+            mobileToggle.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
+        }
+        
+        mobileToggle.addEventListener('click', toggleSidebar);
+        sidebarClose.addEventListener('click', closeSidebar);
+        
+        // Close sidebar when clicking outside
+        document.addEventListener('click', (e) => {
+            if (sidebar.classList.contains('active') && 
+                !sidebar.contains(e.target) && 
+                !mobileToggle.contains(e.target)) {
+                closeSidebar();
+            }
         });
         
-        // Smooth scrolling for documentation links
+        // Close sidebar on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && sidebar.classList.contains('active')) {
+                closeSidebar();
+            }
+        });
+        
+        // Enhanced smooth scrolling for documentation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -580,37 +632,116 @@ body {
                         top: offsetTop,
                         behavior: 'smooth'
                     });
+                    
+                    // Close mobile sidebar after navigation
+                    if (sidebar.classList.contains('active')) {
+                        closeSidebar();
+                    }
                 }
             });
         });
 
-        // Active link highlighting
+        // Enhanced active link highlighting with intersection observer
         const sections = document.querySelectorAll('section[id]');
         const navItems = document.querySelectorAll('.nav-item');
 
-        function updateActiveLink() {
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (scrollY >= (sectionTop - 200)) {
-                    current = section.getAttribute('id');
-                }
-            });
+        const observerOptions = {
+            threshold: 0.3,
+            rootMargin: '-100px 0px -100px 0px'
+        };
 
-            navItems.forEach(item => {
-                item.classList.remove('active');
-                if (item.getAttribute('href') === `#${current}`) {
-                    item.classList.add('active');
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const currentId = entry.target.getAttribute('id');
+                    
+                    navItems.forEach(item => {
+                        item.classList.remove('active');
+                        if (item.getAttribute('href') === `#${currentId}`) {
+                            item.classList.add('active');
+                        }
+                    });
                 }
             });
+        }, observerOptions);
+
+        sections.forEach(section => {
+            sectionObserver.observe(section);
+        });
+
+        // Add focus styles for keyboard navigation
+        document.querySelectorAll('.feature-card, .customization-card, .content-card, .component-card, .breakpoint-card, .support-card, .color-item').forEach(card => {
+            card.addEventListener('focus', function() {
+                this.style.outline = '2px solid var(--primary-color)';
+                this.style.outlineOffset = '2px';
+            });
+            
+            card.addEventListener('blur', function() {
+                this.style.outline = 'none';
+            });
+        });
+
+        // Enhanced accessibility for code blocks
+        document.querySelectorAll('.code-block').forEach(block => {
+            block.setAttribute('role', 'region');
+            block.setAttribute('aria-label', 'Code example');
+        });
+
+        // Add loading animation with performance optimization
+        window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
+            
+            // Animate sections on load with staggered timing
+            document.querySelectorAll('.doc-section').forEach((section, index) => {
+                setTimeout(() => {
+                    section.classList.add('fade-in');
+                }, index * 100);
+            });
+        });
+
+        // Performance optimization: Debounced scroll handler
+        let scrollTimeout;
+        window.addEventListener('scroll', () => {
+            if (scrollTimeout) {
+                clearTimeout(scrollTimeout);
+            }
+            scrollTimeout = setTimeout(() => {
+                // Any scroll-based functionality can be added here
+            }, 10);
+        });
+
+        // Enhanced error handling
+        window.addEventListener('error', (e) => {
+            console.error('Documentation error:', e.error);
+        });
+
+        // Enhanced touch support for mobile devices
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        document.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        document.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            const swipeThreshold = 50;
+            const diff = touchStartX - touchEndX;
+            
+            if (Math.abs(diff) > swipeThreshold) {
+                if (diff > 0 && sidebar.classList.contains('active')) {
+                    // Swipe left - close sidebar
+                    closeSidebar();
+                } else if (diff < 0 && !sidebar.classList.contains('active')) {
+                    // Swipe right - open sidebar
+                    toggleSidebar();
+                }
+            }
         }
-
-        // Update active link on scroll
-        window.addEventListener('scroll', updateActiveLink);
-
-        // Update active link on page load
-        document.addEventListener('DOMContentLoaded', updateActiveLink);
     </script>
 </body>
-</html> 
+</html>

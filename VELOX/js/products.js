@@ -2,39 +2,86 @@
 document.addEventListener('DOMContentLoaded', function() {
     'use strict';
 
+    console.log('VELOX Products Page JavaScript loaded');
+
     // Product filtering functionality
     const filterButtons = document.querySelectorAll('.filter-btn');
     const productItems = document.querySelectorAll('.product-item');
 
-    filterButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const filter = this.getAttribute('data-filter');
-            
-            // Update active button
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            this.classList.add('active');
-            
-            // Filter products
-            filterProducts(filter);
+    console.log(`Found ${filterButtons.length} filter buttons and ${productItems.length} product items`);
+
+    if (filterButtons.length > 0 && productItems.length > 0) {
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const filter = this.getAttribute('data-filter');
+                console.log(`Filtering by: ${filter}`);
+                
+                // Update active button
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Filter products
+                filterProducts(filter);
+            });
         });
-    });
+    }
 
     function filterProducts(filter) {
+        let visibleCount = 0;
+        
         productItems.forEach(item => {
             const category = item.getAttribute('data-category');
             
             if (filter === 'all' || category === filter) {
                 item.classList.remove('hidden');
                 item.style.animation = 'fadeInUp 0.6s ease forwards';
+                visibleCount++;
             } else {
                 item.classList.add('hidden');
             }
         });
+        
+        // Show/hide no products message
+        const noProductsMessage = document.querySelector('.no-products-message');
+        if (visibleCount === 0) {
+            if (!noProductsMessage) {
+                const message = document.createElement('div');
+                message.className = 'no-products-message';
+                message.innerHTML = `
+                    <div class="text-center">
+                        <i class="fas fa-search" style="font-size: 3rem; color: #ccc; margin-bottom: 20px;"></i>
+                        <h4>No products found</h4>
+                        <p>We couldn't find any products in the "${filter}" category.</p>
+                        <button class="btn btn-outline-primary mt-3" onclick="document.querySelector('[data-filter=\"all\"]').click()">
+                            View All Products
+                        </button>
+                    </div>
+                `;
+                document.getElementById('productsContainer').appendChild(message);
+                setTimeout(() => message.classList.add('show'), 100);
+            } else {
+                noProductsMessage.classList.add('show');
+            }
+        } else {
+            if (noProductsMessage) {
+                noProductsMessage.classList.remove('show');
+                setTimeout(() => {
+                    if (noProductsMessage.parentNode) {
+                        noProductsMessage.parentNode.removeChild(noProductsMessage);
+                    }
+                }, 300);
+            }
+        }
+        
+        console.log(`Filtered to show ${visibleCount} products in ${filter} category`);
     }
 
     // Quick view modal functionality
     const quickViewButtons = document.querySelectorAll('.quick-view-btn');
-    const quickViewModal = new bootstrap.Modal(document.getElementById('quickViewModal'));
+    const quickViewModalElement = document.getElementById('quickViewModal');
+    const quickViewModal = quickViewModalElement ? new bootstrap.Modal(quickViewModalElement) : null;
+
+    console.log(`Found ${quickViewButtons.length} quick view buttons`);
 
     // Product data for quick view
     const productData = {
@@ -54,6 +101,14 @@ document.addEventListener('DOMContentLoaded', function() {
             rating: '4.9',
             features: ['Carbon Fiber Plate', 'Lightweight Mesh', 'Racing Outsole', 'Elite Performance']
         },
+        'marathon-pro': {
+            name: 'Marathon Pro',
+            price: '$165',
+            description: 'Long-distance running shoes with maximum cushioning. Perfect for marathon training and endurance running.',
+            image: 'assets/images/user.jpg',
+            rating: '4.7',
+            features: ['Maximum Cushioning', 'Breathable Upper', 'Durable Outsole', 'Long-Distance Comfort']
+        },
         'thunder-elite': {
             name: 'Thunder Elite Basketball',
             price: '$170',
@@ -62,19 +117,51 @@ document.addEventListener('DOMContentLoaded', function() {
             rating: '4.7',
             features: ['Air Cushioning', 'Leather Upper', 'Basketball Outsole', 'Ankle Support']
         },
+        'court-master-pro': {
+            name: 'Court Master Pro',
+            price: '$190',
+            description: 'Professional basketball performance with ankle support. Designed for competitive play and maximum court control.',
+            image: 'assets/images/shoe-1.jpg',
+            rating: '4.9',
+            features: ['Ankle Support', 'Professional Grade', 'Court Control', 'Competitive Design']
+        },
+        'street-hoops': {
+            name: 'Street Hoops',
+            price: '$145',
+            description: 'Urban basketball style meets court performance. Perfect for street basketball and casual play.',
+            image: 'assets/images/shoe-2.jpg',
+            rating: '4.5',
+            features: ['Urban Style', 'Street Performance', 'Casual Design', 'Versatile Use']
+        },
         'power-trainer': {
             name: 'Power Trainer',
             price: '$130',
             description: 'Versatile training shoes for all workouts. From weightlifting to HIIT, these shoes provide stability and comfort.',
-            image: 'assets/images/shoe-1.jpg',
+            image: 'assets/images/premium shoes.png',
             rating: '4.6',
             features: ['Stable Platform', 'Breathable Upper', 'Training Outsole', 'Versatile Design']
+        },
+        'crossfit-elite': {
+            name: 'CrossFit Elite',
+            price: '$120',
+            description: 'High-intensity training shoes for maximum performance. Designed for CrossFit and functional fitness.',
+            image: 'assets/images/shoe-3.jpg',
+            rating: '4.8',
+            features: ['High-Intensity Design', 'Functional Fitness', 'Performance Focus', 'CrossFit Ready']
+        },
+        'gym-master': {
+            name: 'Gym Master',
+            price: '$140',
+            description: 'Weightlifting and strength training shoes. Perfect for powerlifting and heavy lifting sessions.',
+            image: 'assets/images/shoe.png',
+            rating: '4.7',
+            features: ['Weightlifting Design', 'Stable Platform', 'Heavy Lifting', 'Gym Performance']
         },
         'urban-walker': {
             name: 'Urban Walker',
             price: '$110',
             description: 'Comfortable lifestyle shoes for everyday wear. Perfect for walking, casual outings, and daily activities.',
-            image: 'assets/images/shoe-2.jpg',
+            image: 'assets/images/shoe.png',
             rating: '4.5',
             features: ['Memory Foam Insole', 'Leather Upper', 'Walking Outsole', 'All-Day Comfort']
         },
@@ -82,31 +169,52 @@ document.addEventListener('DOMContentLoaded', function() {
             name: 'Street Classic',
             price: '$95',
             description: 'Timeless design meets modern comfort. A classic silhouette with contemporary technology for everyday style.',
-            image: 'assets/images/shoe-3.jpg',
+            image: 'assets/images/user.jpg',
             rating: '4.4',
             features: ['Classic Design', 'Comfortable Fit', 'Durable Construction', 'Versatile Style']
+        },
+        'casual-comfort': {
+            name: 'Casual Comfort',
+            price: '$85',
+            description: 'Everyday lifestyle shoes for ultimate comfort. Perfect for casual wear and daily activities.',
+            image: 'assets/images/premium shoes.png',
+            rating: '4.3',
+            features: ['Ultimate Comfort', 'Casual Design', 'Everyday Use', 'Affordable Price']
         }
     };
 
-    quickViewButtons.forEach(button => {
-        button.addEventListener('click', function(e) {
-            e.preventDefault();
-            const productId = this.getAttribute('data-product');
-            const product = productData[productId];
-            
-            if (product) {
-                populateQuickViewModal(product);
-                quickViewModal.show();
-            }
+    if (quickViewButtons.length > 0 && quickViewModal) {
+        quickViewButtons.forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                const productId = this.getAttribute('data-product');
+                const product = productData[productId];
+                
+                if (product) {
+                    populateQuickViewModal(product);
+                    quickViewModal.show();
+                }
+            });
         });
-    });
+    }
 
     function populateQuickViewModal(product) {
-        document.getElementById('modalProductName').textContent = product.name;
-        document.getElementById('modalProductPrice').textContent = product.price;
-        document.getElementById('modalProductDescription').textContent = product.description;
-        document.getElementById('modalProductImage').src = product.image;
-        document.getElementById('modalProductImage').alt = product.name;
+        const elements = {
+            name: document.getElementById('modalProductName'),
+            price: document.getElementById('modalProductPrice'),
+            description: document.getElementById('modalProductDescription'),
+            image: document.getElementById('modalProductImage'),
+            rating: document.getElementById('modalRatingText')
+        };
+
+        if (elements.name) elements.name.textContent = product.name;
+        if (elements.price) elements.price.textContent = product.price;
+        if (elements.description) elements.description.textContent = product.description;
+        if (elements.image) {
+            elements.image.src = product.image;
+            elements.image.alt = product.name;
+        }
+        if (elements.rating) elements.rating.textContent = `(${product.rating})`;
     }
 
     // Quantity controls
@@ -201,98 +309,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 300);
     }
 
-    // Product search functionality
-    // const searchInput = document.createElement('input');
-    // searchInput.type = 'text';
-    // searchInput.placeholder = 'Search products...';
-    // searchInput.className = 'form-control product-search';
-    // searchInput.style.cssText = `
-    //     max-width: 300px;
-    //     margin: 0 auto 30px;
-    //     border-radius: 25px;
-    //     padding: 12px 20px;
-    //     border: 2px solid #e9ecef;
-    //     transition: border-color 0.3s ease;
-    // `;
-
-    // // Insert search input before filter buttons
-    // const filterSection = document.querySelector('.filter-buttons');
-    // if (filterSection) {
-    //     filterSection.parentNode.insertBefore(searchInput, filterSection);
-    // }
-
-    // searchInput.addEventListener('input', function() {
-    //     const searchTerm = this.value.toLowerCase();
-        
-    //     productItems.forEach(item => {
-    //         const productName = item.querySelector('.product-name').textContent.toLowerCase();
-    //         const productDescription = item.querySelector('.product-description').textContent.toLowerCase();
-            
-    //         if (productName.includes(searchTerm) || productDescription.includes(searchTerm)) {
-    //             item.classList.remove('hidden');
-    //         } else {
-    //             item.classList.add('hidden');
-    //         }
-    //     });
-    // });
-
-    // // Product sorting functionality
-    // const sortSelect = document.createElement('select');
-    // sortSelect.className = 'form-select product-sort';
-    // sortSelect.style.cssText = `
-    //     max-width: 200px;
-    //     margin: 0 auto 30px;
-    //     border-radius: 25px;
-    //     padding: 12px 20px;
-    //     border: 2px solid #e9ecef;
-    //     background-color: white;
-    // `;
-    // sortSelect.innerHTML = `
-    //     <option value="">Sort by</option>
-    //     <option value="price-low">Price: Low to High</option>
-    //     <option value="price-high">Price: High to Low</option>
-    //     <option value="name">Name: A to Z</option>
-    //     <option value="rating">Rating: High to Low</option>
-    // `;
-
-    // // Insert sort select before search input
-    // if (searchInput.parentNode) {
-    //     searchInput.parentNode.insertBefore(sortSelect, searchInput);
-    // }
-
-    // sortSelect.addEventListener('change', function() {
-    //     const sortBy = this.value;
-    //     const productsContainer = document.getElementById('productsContainer');
-    //     const products = Array.from(productItems);
-        
-    //     products.sort((a, b) => {
-    //         switch(sortBy) {
-    //             case 'price-low':
-    //                 const priceA = parseFloat(a.querySelector('.product-price').textContent.replace('$', ''));
-    //                 const priceB = parseFloat(b.querySelector('.product-price').textContent.replace('$', ''));
-    //                 return priceA - priceB;
-    //             case 'price-high':
-    //                 const priceC = parseFloat(a.querySelector('.product-price').textContent.replace('$', ''));
-    //                 const priceD = parseFloat(b.querySelector('.product-price').textContent.replace('$', ''));
-    //                 return priceD - priceC;
-    //             case 'name':
-    //                 const nameA = a.querySelector('.product-name').textContent;
-    //                 const nameB = b.querySelector('.product-name').textContent;
-    //                 return nameA.localeCompare(nameB);
-    //             case 'rating':
-    //                 const ratingA = parseFloat(a.querySelector('.product-rating span').textContent.replace('(', '').replace(')', ''));
-    //                 const ratingB = parseFloat(b.querySelector('.product-rating span').textContent.replace('(', '').replace(')', ''));
-    //                 return ratingB - ratingA;
-    //             default:
-    //                 return 0;
-    //         }
-    //     });
-        
-    //     // Reorder products in DOM
-    //     products.forEach(product => {
-    //         productsContainer.appendChild(product);
-    //     });
-    // });
 
     // Add notification styles
     const notificationStyles = document.createElement('style');
@@ -423,7 +439,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Search functionality here
     }, 300);
 
-    searchInput.addEventListener('input', function() {
-        debouncedSearch(this.value);
-    });
+    // searchInput.addEventListener('input', function() {
+    //     debouncedSearch(this.value);
+    // });
 }); 

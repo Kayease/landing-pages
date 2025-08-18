@@ -65,6 +65,130 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', stickyHeader);
     stickyHeader();
 
+    // Product Quick View Modal Functionality
+    const quickViewModal = document.getElementById('quickViewModal');
+    const quickViewButtons = document.querySelectorAll('.quick-view-btn');
+
+    // Product data for quick view
+    const productData = {
+        'velocity-pro': {
+            name: 'Velocity Pro',
+            price: '$150',
+            description: 'Maximum comfort with visible VeloFoam cushioning. Designed for long-distance running with superior energy return and lightweight construction.',
+            image: 'assets/images/shoe-1.jpg',
+            rating: '4.8',
+            features: ['VeloFoam Cushioning', 'Breathable Mesh Upper', 'Rubber Outsole', 'Lightweight Design']
+        },
+        'thunder-elite': {
+            name: 'Thunder Elite',
+            price: '$170',
+            description: 'Iconic basketball heritage meets street style. Perfect for both court performance and urban fashion.',
+            image: 'assets/images/shoe-2.jpg',
+            rating: '4.7',
+            features: ['Air Cushioning', 'Leather Upper', 'Basketball Outsole', 'Ankle Support']
+        },
+        'sprint-infinity': {
+            name: 'Sprint Infinity',
+            price: '$160',
+            description: 'Designed to help reduce injury and maximize speed. Engineered for elite performance and maximum responsiveness.',
+            image: 'assets/images/shoe-3.jpg',
+            rating: '4.9',
+            features: ['SpeedCore Technology', 'Lightweight Mesh', 'Racing Outsole', 'Elite Performance']
+        }
+    };
+
+    // Initialize Bootstrap modal
+    let quickViewBootstrapModal = null;
+    if (quickViewModal) {
+        quickViewBootstrapModal = new bootstrap.Modal(quickViewModal);
+    }
+
+    // Quick view button functionality
+    quickViewButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            const productId = this.getAttribute('data-product');
+            const product = productData[productId];
+            
+            if (product && quickViewBootstrapModal) {
+                populateQuickViewModal(product);
+                quickViewBootstrapModal.show();
+            }
+        });
+    });
+
+    // Make product cards clickable to show overlay on mobile
+    productCards.forEach(card => {
+        card.addEventListener('click', function(e) {
+            // Don't trigger if clicking on buttons
+            if (e.target.closest('.btn')) {
+                return;
+            }
+            
+            const overlay = this.querySelector('.product-overlay');
+            if (overlay) {
+                // On mobile, show overlay when card is clicked
+                if (window.innerWidth <= 768) {
+                    overlay.style.opacity = '1';
+                    overlay.style.transform = 'scale(1)';
+                    
+                    // Hide overlay after 3 seconds
+                    setTimeout(() => {
+                        overlay.style.opacity = '';
+                        overlay.style.transform = '';
+                    }, 3000);
+                }
+            }
+        });
+    });
+
+    // Populate quick view modal
+    function populateQuickViewModal(product) {
+        const elements = {
+            name: document.getElementById('modalProductName'),
+            price: document.getElementById('modalProductPrice'),
+            description: document.getElementById('modalProductDescription'),
+            image: document.getElementById('modalProductImage'),
+            rating: document.getElementById('modalRatingText')
+        };
+
+        if (elements.name) elements.name.textContent = product.name;
+        if (elements.price) elements.price.textContent = product.price;
+        if (elements.description) elements.description.textContent = product.description;
+        if (elements.image) {
+            elements.image.src = product.image;
+            elements.image.alt = product.name;
+        }
+        if (elements.rating) elements.rating.textContent = `(${product.rating})`;
+    }
+
+    // Quantity controls for modal
+    const quantityInput = document.getElementById('quantity');
+    const decreaseBtn = document.getElementById('decreaseQty');
+    const increaseBtn = document.getElementById('increaseQty');
+
+    if (decreaseBtn && increaseBtn && quantityInput) {
+        decreaseBtn.addEventListener('click', function() {
+            let currentValue = parseInt(quantityInput.value);
+            if (currentValue > 1) {
+                quantityInput.value = currentValue - 1;
+            }
+        });
+
+        increaseBtn.addEventListener('click', function() {
+            let currentValue = parseInt(quantityInput.value);
+            quantityInput.value = currentValue + 1;
+        });
+
+        quantityInput.addEventListener('change', function() {
+            let value = parseInt(this.value);
+            if (value < 1) {
+                this.value = 1;
+            }
+        });
+    }
+
     // Smooth scroll for anchor links with offset for fixed header
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
@@ -488,7 +612,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 this.style.transform = 'scale(1)';
                 
                 // Here you would typically open a modal or navigate to product page
-                alert('Quick view functionality - would open product details modal');
             }, 800);
         });
     });

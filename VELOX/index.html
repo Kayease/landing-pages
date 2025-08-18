@@ -95,12 +95,13 @@
                     </p>
                     <div class="hero-buttons" data-aos="fade-up" data-aos-delay="400">
                         <a href="#products" class="btn btn-primary btn-glow">Shop Now</a>
-                        <a href="#collections" class="btn btn-outline-white ms-3">Explore Collections</a>
+                        <a href="#collections" class="btn btn-outline-white">Explore Collections</a>
                     </div>
                 </div>
                 <div class="col-lg-6 d-none d-lg-flex align-items-center justify-content-center">
                     <div class="hero-shoe-container" data-aos="zoom-in" data-aos-delay="300">
-                        <img src="assets/images/shoe.png" alt="VELOX Velocity Pro" class="hero-shoe" data-tilt data-tilt-glare data-tilt-max="15">
+                        <img src="assets/images/shoe.png" alt="VELOX Velocity Pro" class="hero-shoe" data-tilt
+                            data-tilt-glare data-tilt-max="15">
                         <div class="shoe-glow"></div>
                     </div>
                 </div>
@@ -128,11 +129,12 @@
             </div>
             <div class="row g-4">
                 <div class="col-md-6 col-lg-4">
-                    <div class="product-card" data-aos="fade-up">
+                    <div class="product-card" data-aos="fade-up" data-product="velocity-pro">
                         <div class="product-image">
                             <img src="assets/images/shoe-1.jpg" alt="Air Max 270">
                             <div class="product-overlay">
-                                <button class="btn btn-primary">Quick View</button>
+                                <button class="btn btn-primary quick-view-btn" data-product="velocity-pro">Quick View</button>
+                                <button class="btn btn-outline-white add-to-cart-btn">Add to Cart</button>
                             </div>
                         </div>
                         <div class="product-info">
@@ -143,11 +145,12 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4">
-                    <div class="product-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="product-card" data-aos="fade-up" data-aos-delay="100" data-product="thunder-elite">
                         <div class="product-image">
                             <img src="assets/images/shoe-2.jpg" alt="Thunder Elite">
                             <div class="product-overlay">
-                                <button class="btn btn-primary">Quick View</button>
+                                <button class="btn btn-primary quick-view-btn" data-product="thunder-elite">Quick View</button>
+                                <button class="btn btn-outline-white add-to-cart-btn">Add to Cart</button>
                             </div>
                         </div>
                         <div class="product-info">
@@ -158,11 +161,12 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4">
-                    <div class="product-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="product-card" data-aos="fade-up" data-aos-delay="200" data-product="sprint-infinity">
                         <div class="product-image">
                             <img src="assets/images/shoe-3.jpg" alt="Sprint Infinity">
                             <div class="product-overlay">
-                                <button class="btn btn-primary">Quick View</button>
+                                <button class="btn btn-primary quick-view-btn" data-product="sprint-infinity">Quick View</button>
+                                <button class="btn btn-outline-white add-to-cart-btn">Add to Cart</button>
                             </div>
                         </div>
                         <div class="product-info">
@@ -520,6 +524,69 @@
             </div>
         </div>
     </section>
+
+    <!-- Product Quick View Modal -->
+    <div class="modal fade" id="quickViewModal" tabindex="-1" aria-labelledby="quickViewModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="quickViewModalLabel">Product Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="product-modal-image">
+                                <img src="" alt="Product" id="modalProductImage" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="product-modal-info">
+                                <h3 id="modalProductName"></h3>
+                                <div class="product-modal-rating" id="modalProductRating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span id="modalRatingText">(4.8)</span>
+                                </div>
+                                <div class="product-modal-price" id="modalProductPrice"></div>
+                                <p id="modalProductDescription"></p>
+
+                                <div class="product-modal-options">
+                                    <div class="size-selector">
+                                        <label>Size:</label>
+                                        <select class="form-select">
+                                            <option>7</option>
+                                            <option>8</option>
+                                            <option>9</option>
+                                            <option>10</option>
+                                            <option>11</option>
+                                            <option>12</option>
+                                        </select>
+                                    </div>
+                                    <div class="quantity-selector">
+                                        <label>Quantity:</label>
+                                        <div class="quantity-controls">
+                                            <button class="btn btn-sm btn-outline-secondary" id="decreaseQty">-</button>
+                                            <input type="number" value="1" min="1" class="form-control" id="quantity">
+                                            <button class="btn btn-sm btn-outline-secondary" id="increaseQty">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="product-modal-actions">
+                                    <button class="btn btn-primary btn-lg">Add to Cart</button>
+                                    <button class="btn btn-outline-secondary btn-lg">Add to Wishlist</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="footer bg-dark">

@@ -106,6 +106,9 @@ section {
     letter-spacing: 1px;
     font-size: 0.875rem;
     border: 2px solid transparent;
+    min-height: 44px;
+    -webkit-tap-highlight-color: rgba(255, 0, 0, 0.3);
+    cursor: pointer;
 }
 
 .btn-primary {
@@ -140,6 +143,10 @@ section {
 
 .btn-glow {
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+}
+
+.btn-glow:hover {
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
 }
 
 .btn-lg {
@@ -479,6 +486,10 @@ Hero Section
 
 .hero-buttons {
     margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .hero-shoe-container {
@@ -1446,6 +1457,138 @@ Footer
 }
 
 /*----------------------------------------
+Product Quick View Modal Styles
+----------------------------------------*/
+.product-modal-image {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.product-modal-image img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.product-modal-image:hover img {
+    transform: scale(1.05);
+}
+
+.product-modal-info h3 {
+    color: #2c3e50;
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+}
+
+.product-modal-rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+.product-modal-rating i {
+    color: #f39c12;
+    font-size: 16px;
+}
+
+.product-modal-rating span {
+    color: #7f8c8d;
+    font-weight: 500;
+    margin-left: 5px;
+}
+
+.product-modal-price {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #e74c3c;
+    margin-bottom: 20px;
+}
+
+.product-modal-info p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.product-modal-options {
+    margin-bottom: 25px;
+}
+
+.size-selector,
+.quantity-selector {
+    margin-bottom: 15px;
+}
+
+.size-selector label,
+.quantity-selector label {
+    display: block;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.quantity-controls .form-control {
+    width: 80px;
+    text-align: center;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+}
+
+.quantity-controls .btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.product-modal-actions {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.product-modal-actions .btn {
+    flex: 1;
+    min-width: 150px;
+    padding: 12px 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Modal responsive styles */
+@media (max-width: 768px) {
+    .product-modal-actions {
+        flex-direction: column;
+    }
+    
+    .product-modal-actions .btn {
+        width: 100%;
+        min-width: auto;
+    }
+    
+    .product-modal-info h3 {
+        font-size: 1.5rem;
+    }
+    
+    .product-modal-price {
+        font-size: 1.6rem;
+    }
+}
+
+/*----------------------------------------
 Back to Top Button
 ----------------------------------------*/
 .back-to-top {
@@ -1506,6 +1649,20 @@ Responsive Design
     .contact-form {
         padding: 30px;
     }
+    
+    /* Medium screens: Improve hero buttons layout */
+    .hero-buttons {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+        max-width: 350px;
+        margin: 0 !important;
+        min-height: 50px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1548,21 +1705,104 @@ Responsive Design
     .stat-item span {
         font-size: 1.5rem;
     }
+    
+    /* Tablet: Improve hero buttons layout */
+    .hero-buttons {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 !important;
+        min-height: 50px;
+    }
+    
+    /* Mobile: Show product overlay buttons */
+    .product-overlay {
+        opacity: 1;
+        background: rgba(0, 0, 0, 0.7);
+        flex-direction: column;
+        gap: 10px;
+        transition: all 0.3s ease;
+    }
+    
+    .product-overlay .btn {
+        min-height: 44px; /* Touch-friendly minimum height */
+        width: 80%;
+        max-width: 200px;
+        cursor: pointer;
+        -webkit-tap-highlight-color: rgba(255, 0, 0, 0.3);
+    }
+    
+    /* Ensure product images are visible on mobile */
+    .product-image {
+        height: 250px;
+        overflow: hidden;
+    }
+    
+    .product-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+    
+    /* Improve product card layout on mobile */
+    .product-card {
+        margin-bottom: 20px;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+    }
+    
+    .product-card:active {
+        transform: scale(0.98);
+    }
+    
+    .product-info {
+        padding: 20px 15px;
+    }
+    
+    .product-name {
+        font-size: 1.2rem;
+    }
+    
+    .product-price {
+        font-size: 1.3rem;
+    }
+    
+    /* Ensure proper grid spacing on mobile */
+    .row.g-4 {
+        margin: 0 -10px;
+    }
+    
+    .row.g-4 > [class*="col-"] {
+        padding: 0 10px;
+    }
 }
 
 @media (max-width: 576px) {
     .hero-title {
         font-size: 2rem;
+        margin: 0 auto;
     }
     
     .hero-buttons {
         flex-direction: column;
-        gap: 15px;
+        gap: 12px;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
     }
     
     .hero-buttons .btn {
         width: 100%;
+        max-width: 280px;
         margin: 0 !important;
+        padding: 12px 20px;
+        font-size: 0.9rem;
     }
     
     .section-title {
@@ -1576,6 +1816,25 @@ Responsive Design
     .tech-card,
     .athlete-card {
         padding: 30px 20px;
+    }
+    
+    /* Small mobile: Adjust product overlay */
+    .product-overlay {
+        background: rgba(0, 0, 0, 0.8);
+        gap: 8px;
+    }
+    
+    .product-overlay .btn {
+        padding: 8px 16px;
+        font-size: 0.75rem;
+        min-height: 40px; /* Touch-friendly minimum height */
+        width: 90%;
+        max-width: 180px;
+    }
+    
+    /* Smaller product images for small mobile */
+    .product-image {
+        height: 200px;
     }
 }
 
