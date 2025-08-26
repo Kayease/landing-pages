@@ -65,12 +65,12 @@ section {
 }
 
 .section-padding {
-    padding: 100px 0;
+    padding: 60px 0;
 }
 
 @media (max-width: 768px) {
     .section-padding {
-        padding: 70px 0;
+    padding: 40px 0;
     }
 }
 
@@ -230,7 +230,7 @@ Header & Navigation
 ----------------------------------------*/
 .header {
     background-color: transparent;
-    padding: 20px 0;
+    padding: 10px 0;
     transition: all 0.4s ease;
     z-index: 1000;
 }
@@ -239,7 +239,7 @@ Header & Navigation
     background-color: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
     box-shadow: var(--shadow-sm);
-    padding: 15px 0;
+    padding: 8px 0;
 }
 
 .navbar {
@@ -1349,7 +1349,7 @@ Footer
 ----------------------------------------*/
 .footer {
     background-color: var(--dark-color);
-    padding: 80px 0 30px;
+    padding: 40px 0 15px;
     color: var(--light-color);
 }
 
@@ -1433,7 +1433,7 @@ Footer
 
 .footer-bottom {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding-top: 30px;
+    padding-top: 10px;
 }
 
 .footer-bottom-links {

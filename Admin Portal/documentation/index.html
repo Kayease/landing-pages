@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Admin Portal Documentation</title>
+    <style>
+      :root { --bg: #0b0b0c; --card: #121214; --text: #e6e6e6; --muted: #9aa0a6; --accent: #7c3aed; }
+      * { box-sizing: border-box; }
+      body { margin: 0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, Noto Sans, "Apple Color Emoji", "Segoe UI Emoji"; background: var(--bg); color: var(--text); }
+      .container { max-width: 1100px; margin: 0 auto; padding: 24px; }
+      header { display: flex; align-items: center; justify-content: space-between; padding: 16px 0; }
+      h1 { font-size: 28px; margin: 0; }
+      nav { display: flex; gap: 12px; flex-wrap: wrap; }
+      nav a { color: var(--muted); text-decoration: none; padding: 8px 12px; border-radius: 8px; background: #1a1a1e; }
+      nav a:hover { color: white; background: #232327; }
+      .grid { display: grid; grid-template-columns: 280px 1fr; gap: 24px; }
+      .card { background: var(--card); border: 1px solid #222227; border-radius: 12px; padding: 20px; }
+      .sidebar a { display: block; color: var(--muted); text-decoration: none; padding: 8px 10px; border-radius: 8px; }
+      .sidebar a:hover { color: white; background: #1a1a1e; }
+      h2 { margin-top: 0; font-size: 20px; }
+      code, pre { background: #1a1a1e; color: #e6e6e6; padding: 2px 6px; border-radius: 6px; }
+      pre { padding: 12px; overflow: auto; border: 1px solid #222227; }
+      .muted { color: var(--muted); }
+      .badge { display: inline-block; padding: 2px 8px; font-size: 12px; border-radius: 999px; background: #1a1a1e; border: 1px solid #222227; color: var(--muted); }
+      .footer { text-align: center; font-size: 12px; color: var(--muted); padding: 24px 0; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Admin Portal Documentation <span class="badge">v1.0.0</span></h1>
+        <nav>
+          <a href="#getting-started">Getting Started</a>
+          <a href="#structure">Structure</a>
+          <a href="#theming">Theming</a>
+          <a href="#components">Components</a>
+          <a href="#pages">Pages</a>
+          <a href="#data">Data</a>
+          <a href="#deployment">Deployment</a>
+        </nav>
+      </header>
+
+      <div class="grid">
+        <aside class="card sidebar">
+          <h2>Contents</h2>
+          <a href="#getting-started">Getting Started</a>
+          <a href="#structure">Folder Structure</a>
+          <a href="#env">Environment Variables</a>
+          <a href="#scripts">Scripts</a>
+          <a href="#theming">Theming & Customization</a>
+          <a href="#components">Components Reference</a>
+          <a href="#pages">Pages</a>
+          <a href="#data">Data Layer & Mock API</a>
+          <a href="#deployment">Deployment</a>
+          <a href="#changelog">Changelog</a>
+          <a href="#credits">Credits & Licenses</a>
+          <a href="#support">Support Policy</a>
+        </aside>
+        <main class="card">
+          <section id="getting-started">
+            <h2>Getting Started</h2>
+            <p class="muted">Requirements: Node 18+, PNPM/NPM, Git.</p>
+            <pre><code>npm install
+npm run dev
+# build
+npm run build && npm run preview</code></pre>
+          </section>
+
+          <section id="structure">
+            <h2>Folder Structure</h2>
+            <pre><code>d:/Client/landing pages/Admin Portal/
+  src/
+    components/ ...
+    pages/ ...
+    data/ ...
+    lib/ ...
+    hooks/ ...
+  documentation/ ...
+  TODO.md
+            </code></pre>
+          </section>
+
+          <section id="env">
+            <h2>Environment Variables</h2>
+            <p>Copy <code>env.example</code> to <code>.env</code> and fill values.</p>
+            <pre><code>VITE_API_URL=http://localhost:4000
+VITE_DEMO_MSW=true
+            </code></pre>
+          </section>
+
+          <section id="scripts">
+            <h2>Scripts</h2>
+            <pre><code>npm run dev    # start dev server
+npm run build  # production build
+npm run preview
+            </code></pre>
+          </section>
+
+          <section id="theming">
+            <h2>Theming & Customization</h2>
+            <p>Customize CSS variables in <code>tailwind.config.ts</code> and components. Theme toggle supports system, light, dark.</p>
+          </section>
+
+          <section id="components">
+            <h2>Components Reference</h2>
+            <p>Shadcn UI components are in <code>src/components/ui</code>. Higher-level components like <code>DashboardLayout</code> and <code>StatsCard</code> live in <code>src/components</code>.</p>
+          </section>
+
+          <section id="pages">
+            <h2>Pages</h2>
+            <p>Routes are defined in <code>src/App.tsx</code>. Each page is self-contained in <code>src/pages</code>.</p>
+          </section>
+
+          <section id="data">
+            <h2>Data Layer & Mock API</h2>
+            <p>React Query is configured. The template will include an API client and MSW handlers for demo data.</p>
+          </section>
+
+          <section id="deployment">
+            <h2>Deployment</h2>
+            <p>Build with <code>npm run build</code> and serve the <code>dist/</code> folder via any static host.</p>
+          </section>
+
+          <section id="changelog">
+            <h2>Changelog</h2>
+            <p>See <code>CHANGELOG.md</code> (to be added).</p>
+          </section>
+
+          <section id="credits">
+            <h2>Credits & Licenses</h2>
+            <p>Icons: Lucide. UI: shadcn/ui. Charts: TBD. See license file for details.</p>
+          </section>
+
+          <section id="support">
+            <h2>Support Policy</h2>
+            <p>Email support includes installation, usage questions, and bug reports. Customization and third-party integrations are not covered.</p>
+          </section>
+        </main>
+      </div>
+
+      <div class="footer">© 2025 Admin Portal — Documentation</div>
+    </div>
+  </body>
+  </html>
+
+

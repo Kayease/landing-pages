@@ -1,0 +1,9 @@
+[
+  { "id": "P-1001", "name": "Pro Headphones", "sku": "HP-PRO-01", "price": 129.99, "stock": 230, "category": "Audio", "status": "active" },
+  { "id": "P-1002", "name": "Smart Watch", "sku": "SW-STD-02", "price": 199.00, "stock": 120, "category": "Wearables", "status": "active" },
+  { "id": "P-1003", "name": "Gaming Mouse", "sku": "GM-ELT-03", "price": 49.00, "stock": 540, "category": "Accessories", "status": "active" },
+  { "id": "P-1004", "name": "4K Monitor", "sku": "MN-4K-27", "price": 399.00, "stock": 64, "category": "Displays", "status": "active" },
+  { "id": "P-1005", "name": "Mechanical Keyboard", "sku": "KB-MECH-87", "price": 89.00, "stock": 310, "category": "Accessories", "status": "active" }
+]
+
+

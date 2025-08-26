@@ -1,0 +1,9 @@
+[
+  { "id": 1, "name": "Alice Johnson", "email": "alice@example.com", "role": "manager", "status": "active", "avatar": "" },
+  { "id": 2, "name": "Bob Smith", "email": "bob@example.com", "role": "viewer", "status": "inactive", "avatar": "" },
+  { "id": 3, "name": "Carla Gomez", "email": "carla@example.com", "role": "admin", "status": "active", "avatar": "" },
+  { "id": 4, "name": "David Lee", "email": "david@example.com", "role": "manager", "status": "active", "avatar": "" },
+  { "id": 5, "name": "Eva Patel", "email": "eva@example.com", "role": "viewer", "status": "active", "avatar": "" }
+]
+
+

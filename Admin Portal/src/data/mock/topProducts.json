@@ -1,0 +1,7 @@
+[
+  { "id": 1, "name": "Pro Headphones", "sales": 812, "revenue": "$32,480", "change": "+8%" },
+  { "id": 2, "name": "Smart Watch", "sales": 640, "revenue": "$25,600", "change": "+5%" },
+  { "id": 3, "name": "Gaming Mouse", "sales": 512, "revenue": "$12,288", "change": "-3%" },
+  { "id": 4, "name": "4K Monitor", "sales": 402, "revenue": "$56,280", "change": "+2%" },
+  { "id": 5, "name": "Mechanical Keyboard", "sales": 380, "revenue": "$15,200", "change": "-1%" }
+]

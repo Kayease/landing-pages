@@ -330,9 +330,9 @@ html {
 
 .section-title {
     text-align: center;
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 700;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     color: var(--text-primary);
     background: var(--gradient-primary);
     -webkit-background-clip: text;
@@ -343,8 +343,8 @@ html {
 .section-subtitle {
     text-align: center;
     color: var(--text-secondary);
-    font-size: 1.2rem;
-    margin-bottom: 4rem;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
@@ -358,7 +358,7 @@ html {
 .about-content {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    gap: 4rem;
+    gap: 2rem;
     align-items: center;
 }
 
@@ -407,7 +407,7 @@ html {
 .about-text {
     background: white;
     border-radius: 20px;
-    padding: 3rem;
+    padding: 2rem;
     box-shadow: var(--shadow-medium);
     border: 1px solid var(--border-color);
     position: relative;
@@ -460,12 +460,12 @@ html {
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 .skill-item {
     background: white;
-    padding: 2.5rem;
+    padding: 1.5rem;
     border-radius: 20px;
     box-shadow: var(--shadow-light);
     border: 1px solid var(--border-color);

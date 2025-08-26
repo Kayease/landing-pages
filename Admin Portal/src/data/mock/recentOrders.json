@@ -1,0 +1,9 @@
+[
+  { "id": "ORD-1001", "customer": "Alice Johnson", "date": "2025-08-20", "amount": "$240.00", "status": "delivered" },
+  { "id": "ORD-1002", "customer": "Bob Smith", "date": "2025-08-21", "amount": "$120.00", "status": "processing" },
+  { "id": "ORD-1003", "customer": "Carla Gomez", "date": "2025-08-22", "amount": "$560.00", "status": "shipped" },
+  { "id": "ORD-1004", "customer": "David Lee", "date": "2025-08-23", "amount": "$80.00", "status": "processing" },
+  { "id": "ORD-1005", "customer": "Eva Patel", "date": "2025-08-24", "amount": "$320.00", "status": "delivered" }
+]
+
+
