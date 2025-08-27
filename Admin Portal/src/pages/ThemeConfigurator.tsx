@@ -12,7 +12,7 @@ function setCssVar(name: string, value: string) {
 export default function ThemeConfigurator() {
   const [primary, setPrimary] = useState("#7c3aed");
   const [radius, setRadius] = useState(0.5);
-  const [density, setDensity] = useState(1);
+  const [density, setDensity] = useState(0.85);
 
   useEffect(() => {
     try {
