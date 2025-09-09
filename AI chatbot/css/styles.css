@@ -202,7 +202,7 @@ html {
 
 /* Typing Animation */
 .typing-animation {
-    border-right: 2px solid #00f5ff;
+    /* border-right: 2px solid #00f5ff; */
     animation: blink 1s infinite;
 }
 

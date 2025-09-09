@@ -331,6 +331,32 @@ document.querySelectorAll('.social-links a').forEach(link => {
     });
 });
 
+// Schedule Tab Functionality
+document.querySelectorAll('.tab-btn').forEach(button => {
+    button.addEventListener('click', function() {
+        const targetDay = this.getAttribute('data-day');
+        
+        // Remove active class from all tabs and days
+        document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+        document.querySelectorAll('.schedule-day').forEach(day => day.classList.remove('active'));
+        
+        // Add active class to clicked tab
+        this.classList.add('active');
+        
+        // Show corresponding day content
+        const targetDayElement = document.getElementById(targetDay);
+        if (targetDayElement) {
+            targetDayElement.classList.add('active');
+        }
+        
+        // Add click animation
+        this.style.transform = 'scale(0.95)';
+        setTimeout(() => {
+            this.style.transform = '';
+        }, 150);
+    });
+});
+
 // Logo Click Handler
 document.querySelector('.logo').addEventListener('click', function(e) {
     e.preventDefault();
